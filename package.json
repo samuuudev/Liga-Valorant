@@ -1,0 +1,23 @@
+{
+  "name": "liga-valorant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuuudev/Liga-Valorant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samuuudev/Liga-Valorant/issues"
+  },
+  "homepage": "https://github.com/samuuudev/Liga-Valorant#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}
