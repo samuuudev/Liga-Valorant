@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Liga Valorant</title>
+
+	<!-- Css Bootstrap -->
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+	<!-- Mi Css -->
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+	<!-- Ref js -->
+
+	<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
+	<!-- Nav bar -->
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Liga Valorant</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" data-page="index.html" href="ligas.html">Ligas</a></li>
+					<li class="nav-item"><a class="nav-link" data-page="index.html" href="equipos.html">Equipos</a></li>
+					<li class="nav-item"><a class="nav-link" data-page="index.html" href="jugadores.html">Jugadores</a></li>
+				</ul>
+				<form class="d-flex" role="search">
+					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+					<button class="btn btn-outline-success" type="submit">
+						Search
+					</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+
+		<!-- Fnatic -->
+	<div class="row row-cols-1 row-cols-md-3 g-4">
+		<div class="col">
+			<div class="card" style="width: 18rem;">
+				<img src="assets/images/ligas/emea.webp" class="card-img-top" alt="VCT EMEA">
+				<div class="card-body">
+					<h5 class="card-title">VCT EMEA</h5>
+					<p class="card-text">Región: EMEA</p>
+					<a href="#" class="btn btn-primary btn-sm">Ver detalles</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- G2 -->
+		<div class="col">
+			<div class="card" style="width: 18rem;">
+				<img src="assets/images/ligas/emea.webp" class="card-img-top" alt="VCT AMERICAS">
+				<div class="card-body">
+					<h5 class="card-title">VCT AMERICAS</h5>
+					<p class="card-text">Región: America</p>
+					<a href="#" class="btn btn-primary">Ver detalles</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
