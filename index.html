@@ -14,6 +14,10 @@
 </head>
 
 <body>
+
+    <!-- Referencia al script de bootstrap -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
 	<!-- Nav bar -->
 	<nav class="navbar navbar-expand-lg bg-body-tertiary">
 		<div class="container-fluid">
@@ -27,18 +31,79 @@
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Home</a></li>
 					<li class="nav-item"><a class="nav-link" data-page="index.html" href="ligas.html">Ligas</a></li>
-					<li class="nav-item"><a class="nav-link" data-page="index.html" href="teams.html">Equipos</a></li>
-					<li class="nav-item"><a class="nav-link" data-page="index.html" href="players.html">Jugadores</a></li>
+					<li class="nav-item"><a class="nav-link" data-page="index.html" href="equipos.html">Equipos</a></li>
+					<li class="nav-item"><a class="nav-link" data-page="index.html" href="jugadores.html">Jugadores</a></li>
 				</ul>
-				<form class="d-flex" role="search">
-					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-					<button class="btn btn-outline-success" type="submit">
-						Search
-					</button>
-				</form>
 			</div>
 		</div>
 	</nav>
+
+	<section id="carrusel-inicio">
+
+		<div id="carouselExampleFade" class="carousel slide carousel-fade">
+		<div class="carousel-inner">
+			<div class="carousel-item active data-bs-interval="10000"">
+				<img src="assets/Images/skin-champions-2025.webp" class="d-block w-100" alt="...">
+			</div>
+			<div class="carousel-item data-bs-interval="10000"">
+				<img src="assets/Images/pais-champions-2025.webp" class="d-block w-100" alt="...">
+			</div>
+			<div class="carousel-item data-bs-interval="10000"">
+				<img src="assets/Images/new-map-Corrode.webp" class="d-block w-100" alt="...">
+			</div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+		</div>
+
+
+	</section>
+
+	<section id="partidos-jugados">
+
+		<div class="container">
+			<h1>Partidos jugados recientes</h1>
+
+			<table class="table table-hover">
+			<thead>
+				<tr>
+				<th scope="col">#</th>
+				<th scope="col">Fecha</th>
+				<th scope="col">Resultado</th>
+				<th scope="col">Equipos</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>10/09/2025</td>
+					<td>13-10</td>
+					<td>Heretics VS Fnatic</td>
+				</tr>
+				<tr>
+					<th scope="row">1</th>
+					<td>10/09/2025</td>
+					<td>13-10</td>
+					<td>Heretics VS Fnatic</td>
+				</tr>
+				<tr>
+					<th scope="row">1</th>
+					<td>10/09/2025</td>
+					<td>13-10</td>
+					<td>Heretics VS Fnatic</td>
+				</tr>
+			</tbody>
+			</table>
+			</div>
+	</section>
+
+
 </body>
 
 </html>
