@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
 	<!-- Mi Css -->
-	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="/css/mainStyle.css" />
 </head>
 
 <body>
@@ -18,31 +18,164 @@
     <!-- Referencia al script de bootstrap -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-    	<!-- Nav bar -->
-	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+	<!-- Nav bar -->
+	<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Liga Valorant</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<div class="text-center" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Home</a></li>
 					<li class="nav-item"><a class="nav-link" data-page="index.html" href="ligas.html">Ligas</a></li>
 					<li class="nav-item"><a class="nav-link" data-page="index.html" href="equipos.html">Equipos</a></li>
-					<li class="nav-item"><a class="nav-link" data-page="index.html" href="jugadores.html">Jugadores</a></li>
+					<li class="nav-item"><a class="nav-link active" data-page="index.html" href="jugadores.html">Jugadores</a></li>
 				</ul>
-				<form class="d-flex" role="search">
-					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-					<button class="btn btn-outline-success" type="submit">
-						Search
-					</button>
-				</form>
+			</div>
+
+			<div class="text-end">
+				<button type="button" class="btn btn-primary">Iniciar sesion</button>
 			</div>
 		</div>
 	</nav>
 
+
+	<div class="container text-center">
+			<h1></h1>
+
+		<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Equipo</th>
+      <th scope="col">KDA</th>
+      <th scope="col">%HS</th>
+      <th scope="col">ROL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Derke</td>
+      <td><img src="/assets/images/equipos/FnaticTeam.webp" alt="Fnatic" width="24" class="me-2">Fnatic</td>
+      <td>1.85</td>
+      <td>52%</td>
+      <td>Duelista</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Ace</td>
+      <td><img src="/assets/images/equipos/Natus_Vincere.webp" alt="Natus Vincere" width="24" class="me-2">Natus Vincere</td>
+      <td>1.92</td>
+      <td>49%</td>
+      <td>Controlador</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Mixwell</td>
+      <td><img src="/assets/images/equipos/Team_Heretics.webp" alt="Team Heretics" width="24" class="me-2">Team Heretics</td>
+      <td>1.78</td>
+      <td>55%</td>
+      <td>Duelista</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>ShahZaM</td>
+      <td><img src="/assets/images/equipos/BBL_Esports.webp" alt="BBL_Esports.webp" width="24" class="me-2">Kinguin</td>
+      <td>1.66</td>
+      <td>50%</td>
+      <td>Sentinela</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>ScreaM</td>
+      <td><img src="/assets/images/equipos/KOI.webp" alt="KOI" width="24" class="me-2">G2 Esports</td>
+      <td>1.99</td>
+      <td>61%</td>
+      <td>Duelista</td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>cNed</td>
+      <td><img src="/assets/images/equipos/Team_Vitality.webp" alt="Team_Vitality.webp" width="24" class="me-2">Paper Rex</td>
+      <td>2.05</td>
+      <td>57%</td>
+      <td>Duelista</td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td>yay</td>
+      <td><img src="/assets/images/equipos/Team_Liquid.webp" alt="Team_Liquid.webp" width="24" class="me-2">FaZe Clan</td>
+      <td>1.88</td>
+      <td>54%</td>
+      <td>Duelista</td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td>Derke</td>
+      <td><img src="/assets/images/equipos/FnaticTeam.webp" alt="Fnatic" width="24" class="me-2">Fnatic</td>
+      <td>1.76</td>
+      <td>51%</td>
+      <td>Duelista</td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td>nAts</td>
+      <td><img src="/assets/images/equipos/Natus_Vincere.webp" alt="Natus Vincere" width="24" class="me-2">Natus Vincere</td>
+      <td>1.69</td>
+      <td>48%</td>
+      <td>Sentinela</td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td>f0rsakeN</td>
+      <td><img src="/assets/images/equipos/Team_Heretics.webp" alt="Team Heretics" width="24" class="me-2">Team Heretics</td>
+      <td>1.82</td>
+      <td>53%</td>
+      <td>Duelista</td>
+    </tr>
+    <tr>
+      <th scope="row">11</th>
+      <td>Zombs</td>
+      <td><img src="/assets/images/equipos/Kinguin.webp" alt="Kinguin" width="24" class="me-2">Kinguin</td>
+      <td>1.71</td>
+      <td>49%</td>
+      <td>IGL</td>
+    </tr>
+    <tr>
+      <th scope="row">12</th>
+      <td>Derke</td>
+      <td><img src="/assets/images/equipos/FaZe.webp" alt="FaZe" width="24" class="me-2">FaZe Clan</td>
+      <td>1.95</td>
+      <td>56%</td>
+      <td>Duelista</td>
+    </tr>
+    <tr>
+      <th scope="row">13</th>
+      <td>yay</td>
+      <td><img src="/assets/images/equipos/Bro.webp" alt="Paper Rex" width="24" class="me-2">Paper Rex</td>
+      <td>1.87</td>
+      <td>52%</td>
+      <td>Duelista</td>
+    </tr>
+    <tr>
+      <th scope="row">14</th>
+      <td>Mixwell</td>
+      <td><img src="/assets/images/equipos/G2.webp" alt="G2" width="24" class="me-2">G2 Esports</td>
+      <td>1.80</td>
+      <td>55%</td>
+      <td>Duelista</td>
+    </tr>
+    <tr>
+      <th scope="row">15</th>
+      <td>ShahZaM</td>
+      <td><img src="/assets/images/equipos/FnaticTeam.webp" alt="Fnatic" width="24" class="me-2">Fnatic</td>
+      <td>1.68</td>
+      <td>50%</td>
+      <td>Sentinela</td>
+    </tr>
+  </tbody>
+</table>
+
+	</div>
 </body>
 </html>

@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
 	<!-- Mi Css -->
-	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="css/mainStyle.css" />
 </head>
 
 <body>
@@ -19,24 +19,82 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 	<!-- Nav bar -->
-	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+	<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Liga Valorant</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<div class="text-center" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Home</a></li>
-					<li class="nav-item"><a class="nav-link" data-page="index.html" href="ligas.html">Ligas</a></li>
+					<li class="nav-item"><a class="nav-link active" data-page="index.html" href="ligas.html">Ligas</a></li>
 					<li class="nav-item"><a class="nav-link" data-page="index.html" href="equipos.html">Equipos</a></li>
 					<li class="nav-item"><a class="nav-link" data-page="index.html" href="jugadores.html">Jugadores</a></li>
 				</ul>
 			</div>
+
+			<div class="text-end">
+				<button type="button" class="btn btn-primary">Iniciar sesion</button>
+			</div>
 		</div>
 	</nav>
+
+
+<div class="card-container mt-4">
+
+	<h1 class="text-center">Ligas actuales</h1>
+
+        <div class="row py-3">
+
+            <div class="col-3 d-flex justify-content-center">
+                <!-- VCT EMEA -->
+                <div class="card mx-2" style="width: 18rem;">
+                    <img src="assets/Images/VCT_2025_EMEA_League_full_darkmode.webp" class="card-img-top" alt="VCT EMEA 2025">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">VCT EMEA</h5>
+                        <p class="card-text">Liga Region Europea 2025</p>
+                        <a href="equipos.html#liga-emea" class="btn btn-primary">Ver equipos</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-3 d-flex justify-content-center">
+                <!-- VCT AMERICAS -->
+                <div class="card mx-2" style="width: 18rem;">
+                    <img src="assets/Images/VCT_2025_Americas_League_full_allmode.webp" class="card-img-top " alt="VCT AMERICAS 2025">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">VCT AMERICAS</h5>
+                        <p class="card-text">Liga Region America</p>
+                        <a href="equipos.html#liga-americas" class="btn btn-primary">Ver equipos</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-3 d-flex justify-content-center">
+                <!-- VCT PACIFIC -->
+                <div class="card mx-2" style="width: 18rem;">
+                    <img src="assets/Images/VCT_2023_Pacific_League_full_allmode.webp" class="card-img-top" alt="VCT PACIFIC">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">VCT PACIFIC</h5>
+                        <p class="card-text">Liga valorant region Asia</p>
+                        <a href="equipos.html#liga-pacific" class="btn btn-primary">Ver equipos</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-3 d-flex justify-content-center">
+                <!-- VCT CN -->
+                <div class="card mx-2" style="width: 18rem;">
+                    <img src="assets/Images/VCT_China_full_allmode.webp" class="card-img-top" alt="VCT CN">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">VCT CHINA</h5>
+                        <p class="card-text">Liga valorant en china</p>
+                        <a href="equipos.html#liga-china" class="btn btn-primary">Ver equipos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+	
 
 </body>
 </html>

@@ -1,0 +1,61 @@
+
+/* Fondo global */
+body {
+  background-color: #53212b; /* oscuro burdeos */
+  color: #fffbf5; /* texto en blanco cálido */
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #000000 !important; /* negro sólido */
+}
+.navbar .nav-link,
+.navbar-brand {
+  color: #fffbf5 !important;
+}
+.navbar .nav-link:hover {
+  color: #fd4556 !important; /* rojo vivo */
+}
+
+/* Tarjetas */
+.card {
+  background-color: #000000; /* fondo claro para contraste */
+  border: 2px solid #bd3944; /* rojo oscuro como borde */
+  height: 100%; /* se estira al mismo alto que las demás */
+}
+.card-title {
+  color: #fd4556; /* rojo vivo para destacar nombres */
+}
+.card-text {
+  color: #fffbf5; /* negro puro para legibilidad */
+  height: 8rem;
+}
+.card-img-top {
+  object-fit: contain; /* encaja todo dentro sin recortes */
+  height: 150px; /* o lo que te guste */
+  width: 100%;
+  padding: 1rem;
+}
+
+
+/* Botones */
+.btn-primary {
+  background-color: #fd4556; /* rojo vivo */
+  border-color: #fd4556;
+  color: #fffbf5;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.btn-primary:hover {
+  background-color: #bd3944; /* rojo oscuro */
+  border-color: #bd3944;
+}
+
+/* Footer */
+footer {
+  background-color: #000000; /* negro sólido */
+  color: #fffbf5;
+  padding: 20px;
+  text-align: center;
+}
