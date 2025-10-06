@@ -1,3 +1,5 @@
+// Filtrado por equipos para la pagina equipos.html
+
 function filtrarPorEquipo(idSelect, selectorElementos){
     const select= document.getElementById(idSelect);
 
@@ -17,11 +19,10 @@ function filtrarPorEquipo(idSelect, selectorElementos){
     mostrarElemento();
 
 }
-
-//Equipos
+// llamda a la funcion
 filtrarPorEquipo('filtroEquipo', '[data-type="team"]');
 
-
+// Filtrado por equipo, liga y nombre
 function filtrarJugadores(selectEquipoId, selectLigaId, inputNombreId, selectorElementos) {
     const selectEquipo = document.getElementById(selectEquipoId);
     const selectLiga = document.getElementById(selectLigaId);
@@ -45,16 +46,14 @@ function filtrarJugadores(selectEquipoId, selectLigaId, inputNombreId, selectorE
         });
     }
 
-    // Escuchar cambios en los selects y en el input
     selectEquipo.addEventListener("change", mostrarElementos);
     selectLiga.addEventListener("change", mostrarElementos);
     inputNombre.addEventListener("input", mostrarElementos);
 
-    // Mostrar inicialmente todos los elementos
     mostrarElementos();
 }
 
-// Llamada a la función, añade un input con id="buscarNombre" en tu HTML
+// Llamada a la función
 filtrarJugadores('filtroEquipo', 'filtroLiga', 'buscarNombre', '[data-type="player"]');
 
 
