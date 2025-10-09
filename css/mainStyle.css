@@ -29,6 +29,8 @@ body {
   border: 2px solid #bd3944; /* rojo oscuro como borde */
   height: 100%; /* se estira al mismo alto que las demás */
 }
+
+
 .card-title {
   color: #fd4556; /* rojo vivo para destacar nombres */
 }
@@ -52,9 +54,16 @@ body {
   font-weight: bold;
   text-transform: uppercase;
 }
+
+
 .btn-primary:hover {
   background-color: #bd3944; /* rojo oscuro */
   border-color: #bd3944;
+}
+
+.table{
+  background-color: #bd3944;
+  color: #bd3944;
 }
 
 /* Footer */
@@ -63,4 +72,13 @@ footer {
   color: #fffbf5;
   padding: 20px;
   text-align: center;
+}
+
+
+
+@media(max-width: 992px) {
+  .card{
+    background-color: yellow;
+  }
+  
 }

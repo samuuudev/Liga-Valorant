@@ -40,93 +40,227 @@
 	</nav>
 
     <section id="clasificacion-equipos">
-        <table class="table text-center" style="border-collapse: separate; border-spacing: 0;">
-            <thead style="background-color:#bd3944; color:#fffbf5;">
-                <tr>
-                    <th>#</th>
-                    <th>Equipo</th>
-                    <th>Puntos</th>
-                    <th>Victorias</th>
-                    <th>Derrotas</th>
-                    <th>Partidos Jugados</th>
-                    <th>KDA Promedio</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr style="background-color:#fffbf5;" onmouseover="this.style.backgroundColor='#fd4556'; this.style.color='#fffbf5';" onmouseout="this.style.backgroundColor='#fffbf5'; this.style.color='#53212b';">
-                    <th>1</th>
-                    <td><img src="/assets/images/equipos/FnaticTeam.webp" width="24" class="me-2">Fnatic</td>
-                    <td>16</td>
-                    <td>8</td>
-                    <td>2</td>
-                    <td>10</td>
-                    <td>1.85</td>
-                </tr>
-                <tr style="background-color:#f5eaea;" onmouseover="this.style.backgroundColor='#fd4556'; this.style.color='#fffbf5';" onmouseout="this.style.backgroundColor='#f5eaea'; this.style.color='#53212b';">
-                    <th>2</th>
-                    <td><img src="/assets/images/equipos/Team_Heretics.webp" width="24" class="me-2">Team Heretics</td>
-                    <td>14</td>
-                    <td>7</td>
-                    <td>3</td>
-                    <td>10</td>
-                    <td>1.78</td>
-                </tr>
-                <tr style="background-color:#fffbf5;" onmouseover="this.style.backgroundColor='#fd4556'; this.style.color='#fffbf5';" onmouseout="this.style.backgroundColor='#fffbf5'; this.style.color='#53212b';">
-                    <th>3</th>
-                    <td><img src="/assets/images/equipos/G2.webp" width="24" class="me-2">G2 Esports</td>
-                    <td>12</td>
-                    <td>6</td>
-                    <td>4</td>
-                    <td>10</td>
-                    <td>1.80</td>
-                </tr>
-                <tr style="background-color:#f5eaea;" onmouseover="this.style.backgroundColor='#fd4556'; this.style.color='#fffbf5';" onmouseout="this.style.backgroundColor='#f5eaea'; this.style.color='#53212b';">
-                    <th>4</th>
-                    <td><img src="/assets/images/equipos/Team_Vitality.webp" width="24" class="me-2">Paper Rex</td>
-                    <td>12</td>
-                    <td>6</td>
-                    <td>4</td>
-                    <td>10</td>
-                    <td>2.05</td>
-                </tr>
-                <tr style="background-color:#fffbf5;" onmouseover="this.style.backgroundColor='#fd4556'; this.style.color='#fffbf5';" onmouseout="this.style.backgroundColor='#fffbf5'; this.style.color='#53212b';">
-                    <th>5</th>
-                    <td><img src="/assets/images/equipos/FaZe.webp" width="24" class="me-2">FaZe Clan</td>
-                    <td>10</td>
-                    <td>5</td>
-                    <td>5</td>
-                    <td>10</td>
-                    <td>1.88</td>
-                </tr>
-                <tr style="background-color:#f5eaea;" onmouseover="this.style.backgroundColor='#fd4556'; this.style.color='#fffbf5';" onmouseout="this.style.backgroundColor='#f5eaea'; this.style.color='#53212b';">
-                    <th>6</th>
-                    <td><img src="/assets/images/equipos/Natus_Vincere.webp" width="24" class="me-2">Natus Vincere</td>
-                    <td>8</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>9</td>
-                    <td>1.92</td>
-                </tr>
-                <tr style="background-color:#fffbf5;" onmouseover="this.style.backgroundColor='#fd4556'; this.style.color='#fffbf5';" onmouseout="this.style.backgroundColor='#fffbf5'; this.style.color='#53212b';">
-                    <th>7</th>
-                    <td><img src="/assets/images/equipos/Kinguin.webp" width="24" class="me-2">Kinguin</td>
-                    <td>6</td>
-                    <td>3</td>
-                    <td>6</td>
-                    <td>9</td>
-                    <td>1.66</td>
-                </tr>
-                <tr style="background-color:#f5eaea;" onmouseover="this.style.backgroundColor='#fd4556'; this.style.color='#fffbf5';" onmouseout="this.style.backgroundColor='#f5eaea'; this.style.color='#53212b';">
-                    <th>8</th>
-                    <td><img src="/assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
-                    <td>4</td>
-                    <td>2</td>
-                    <td>8</td>
-                    <td>10</td>
-                    <td>1.99</td>
-                </tr>
-            </tbody>
-        </table>
+
+        <div  class="row">
+            <!-- Liga Emea -->
+            <div class="container col-md-3">
+                <table class="table text-center" style="border-collapse: separate; border-spacing: 0;">
+                    <thead style="background-color:#bd3944; color:#fffbf5;">
+                        <tr>
+                            <th>Equipo</th>
+                            <th>Puntos</th>
+                            <th>KDA Promedio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="/assets/images/equipos/FnaticTeam.webp" width="24" class="me-2">Fnatic</td>
+                            <td>16</td>
+                            <td>1.85</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/Team_Heretics.webp" width="24" class="me-2">Team Heretics</td>
+                            <td>14</td>
+                            <td>1.78</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/G2.webp" width="24" class="me-2">G2 Esports</td>
+                            <td>12</td>
+                            <td>1.80</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/Team_Vitality.webp" width="24" class="me-2">Paper Rex</td>
+                            <td>12</td>
+                            <td>2.05</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/FaZe.webp" width="24" class="me-2">FaZe Clan</td>
+                            <td>10</td>
+                            <td>1.88</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/Natus_Vincere.webp" width="24" class="me-2">Natus Vincere</td>
+                            <td>8</td>
+                            <td>1.92</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/Kinguin.webp" width="24" class="me-2">Kinguin</td>
+                            <td>6</td>
+                            <td>1.66</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
+                            <td>4</td>
+                            <td>1.99</td>
+                        </tr>
+                    </tbody>
+                </table>
+    
+            </div>
+            <div class="container col-md-3">
+                <table class="table text-center" style="border-collapse: separate; border-spacing: 0;">
+                    <thead style="background-color:#bd3944; color:#fffbf5;">
+                        <tr>
+                            <th>Equipo</th>
+                            <th>Puntos</th>
+                            <th>KDA Promedio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="/assets/images/equipos/FnaticTeam.webp" width="24" class="me-2">Fnatic</td>
+                            <td>16</td>
+                            <td>1.85</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/Team_Heretics.webp" width="24" class="me-2">Team Heretics</td>
+                            <td>14</td>
+                            <td>1.78</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/G2.webp" width="24" class="me-2">G2 Esports</td>
+                            <td>12</td>
+                            <td>1.80</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/Team_Vitality.webp" width="24" class="me-2">Paper Rex</td>
+                            <td>12</td>
+                            <td>2.05</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/FaZe.webp" width="24" class="me-2">FaZe Clan</td>
+                            <td>10</td>
+                            <td>1.88</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/Natus_Vincere.webp" width="24" class="me-2">Natus Vincere</td>
+                            <td>8</td>
+                            <td>1.92</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/Kinguin.webp" width="24" class="me-2">Kinguin</td>
+                            <td>6</td>
+                            <td>1.66</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
+                            <td>4</td>
+                            <td>1.99</td>
+                        </tr>
+                    </tbody>
+                </table>
+    
+            </div>
+            <div class="container col-md-3">
+                <table class="table text-center" style="border-collapse: separate; border-spacing: 0;">
+                    <thead style="background-color:#bd3944; color:#fffbf5;">
+                        <tr>
+                            <th>Equipo</th>
+                            <th>Puntos</th>
+                            <th>KDA Promedio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="/assets/images/equipos/FnaticTeam.webp" width="24" class="me-2">Fnatic</td>
+                            <td>16</td>
+                            <td>1.85</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/Team_Heretics.webp" width="24" class="me-2">Team Heretics</td>
+                            <td>14</td>
+                            <td>1.78</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/G2.webp" width="24" class="me-2">G2 Esports</td>
+                            <td>12</td>
+                            <td>1.80</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/Team_Vitality.webp" width="24" class="me-2">Paper Rex</td>
+                            <td>12</td>
+                            <td>2.05</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/FaZe.webp" width="24" class="me-2">FaZe Clan</td>
+                            <td>10</td>
+                            <td>1.88</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/Natus_Vincere.webp" width="24" class="me-2">Natus Vincere</td>
+                            <td>8</td>
+                            <td>1.92</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/Kinguin.webp" width="24" class="me-2">Kinguin</td>
+                            <td>6</td>
+                            <td>1.66</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
+                            <td>4</td>
+                            <td>1.99</td>
+                        </tr>
+                    </tbody>
+                </table>
+    
+            </div>
+            <div class="container col-md-3">
+                <table class="table text-center" style="border-collapse: separate; border-spacing: 0;">
+                    <thead style="background-color:#bd3944; color:#fffbf5;">
+                        <tr>
+                            <th>Equipo</th>
+                            <th>Puntos</th>
+                            <th>KDA Promedio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="/assets/images/equipos/FnaticTeam.webp" width="24" class="me-2">Fnatic</td>
+                            <td>16</td>
+                            <td>1.85</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/Team_Heretics.webp" width="24" class="me-2">Team Heretics</td>
+                            <td>14</td>
+                            <td>1.78</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/G2.webp" width="24" class="me-2">G2 Esports</td>
+                            <td>12</td>
+                            <td>1.80</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/Team_Vitality.webp" width="24" class="me-2">Paper Rex</td>
+                            <td>12</td>
+                            <td>2.05</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/FaZe.webp" width="24" class="me-2">FaZe Clan</td>
+                            <td>10</td>
+                            <td>1.88</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/Natus_Vincere.webp" width="24" class="me-2">Natus Vincere</td>
+                            <td>8</td>
+                            <td>1.92</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/Kinguin.webp" width="24" class="me-2">Kinguin</td>
+                            <td>6</td>
+                            <td>1.66</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
+                            <td>4</td>
+                            <td>1.99</td>
+                        </tr>
+                    </tbody>
+                </table>
+    
+            </div>
+        </div>
+
     </section>
 
 
@@ -293,7 +427,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+
+                
         
             <!-- Liga AMERICAS -->
         
