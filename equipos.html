@@ -11,15 +11,15 @@
 
 	<!-- Mi Css -->
 	<link rel="stylesheet" href="/css/mainStyle.css" />
+    <link rel="stylesheet" href="/css/equipos.css">
 </head>
 
 <body>
 
 
 
-
-	<!-- Nav bar -->
-	<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+	<!-- Nav bar normal sin colapsar para resoluciones grandes -->
+	<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" id="navbar_normal">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Liga Valorant</a>
 			<div class="text-center" id="navbarSupportedContent">
@@ -28,7 +28,7 @@
 					<li class="nav-item"><a class="nav-link" data-page="index.html" href="ligas.html">Ligas</a></li>
 					<li class="nav-item"><a class="nav-link active" data-page="index.html" href="equipos.html">Equipos</a></li>
 					<li class="nav-item"><a class="nav-link" data-page="index.html" href="jugadores.html">Jugadores</a></li>
-                    <li class="nav-item"><a class="nav-link" data-page="index.html" href="arbitros.html">Arbitros</a></li>
+					<li class="nav-item"><a class="nav-link" data-page="index.html" href="arbitros.html">Arbitros</a></li>
 					<li class="nav-item"><a class="nav-link" data-page="index.html" href="inscripcion.html">Inscripcion</a></li>
 				</ul>
 			</div>
@@ -38,6 +38,33 @@
 			</div>
 		</div>
 	</nav>
+
+	<!-- Nav bar colapsada para el diseño responsive -->
+    <nav class="navbar bg-body-tertiary sticky-top" id="navbar_colapsada">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Liga Valorant</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Liga Valorant</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="index.html" href="ligas.html">Ligas</a></li>
+                        <li class="nav-item"><a class="nav-link active" data-page="index.html" href="equipos.html">Equipos</a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="index.html" href="jugadores.html">Jugadores</a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="index.html" href="arbitros.html">Arbitros</a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="index.html" href="inscripcion.html">Inscripcion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
 
     <section id="clasificacion-equipos">
 

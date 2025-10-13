@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo global */
+body {
+  background-color: #53212b; /* oscuro burdeos */
+  color: #fffbf5; /* texto en blanco cálido */
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #000000 !important; /* negro sólido */
+}
+.navbar .nav-link,
+.navbar-brand {
+  color: #fffbf5 !important;
+}
+.navbar .nav-link:hover {
+  color: #fd4556 !important; /* rojo vivo */
+}
+
+/* Offcanvas (navbar colapsado) oscuro */
+.offcanvas {
+  background-color: #000000 !important; /* fondo negro sólido */
+  color: #fffbf5; /* texto claro */
+}
+
+.offcanvas .offcanvas-title {
+  color: #fffbf5;
+}
+
+.offcanvas .nav-link {
+  color: #fffbf5 !important;
+}
+
+.offcanvas .nav-link:hover {
+  color: #fd4556 !important; /* rojo vivo al pasar */
+}
+
+.offcanvas .btn-close {
+  filter: invert(1); /* hace que la X sea visible sobre el fondo negro */
+}
+
+
+
+/* Carrusel */
+.carousel {
+  max-height: 600px; /* ajusta a gusto: 350–500px suele ir bien */
+  overflow: hidden;
+}
+
+.carousel-item img {
+  height: 600px;       /* misma altura para todas */
+  width: 100%;
+  object-fit: cover;    /* recorta lo necesario sin deformar */
+}
+
+
+
+/* Tarjetas */
+.card {
+  background-color: #000000; /* fondo claro para contraste */
+  border: 2px solid #bd3944; /* rojo oscuro como borde */
+  height: 100%; /* se estira al mismo alto que las demás */
+}
+
+
+.card-title {
+  color: #fd4556; /* rojo vivo para destacar nombres */
+}
+.card-text {
+  color: #fffbf5; /* negro puro para legibilidad */
+  height: auto;
+}
+.card-img-top {
+  object-fit: contain; /* encaja todo dentro sin recortes */
+  height: 150px; /* o lo que te guste */
+  width: 100%;
+  padding: 1rem;
+}
+
+
+/* Botones */
+.btn-primary {
+  background-color: #fd4556; /* rojo vivo */
+  border-color: #fd4556;
+  color: #fffbf5;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.btn-primary:hover {
+  background-color: #bd3944; /* rojo oscuro */
+  border-color: #bd3944;
+}
+
+.table{
+  background-color: #bd3944;
+  color: #bd3944;
+}
+
+/* Footer */
+footer {
+  background-color: #000000; /* negro sólido */
+  color: #fffbf5;
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+@media(max-width: 991px) {
+
+  #navbar_normal{
+    display: none;
+  }
+
+  #navbar_colapsada{
+    display: block;
+  }
+}
+@media(min-width: 992px){
+
+  #navbar_normal{
+    display: block;
+  }
+
+  #navbar_colapsada{
+    display: none;
+  }
+}
