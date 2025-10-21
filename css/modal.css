@@ -1,0 +1,51 @@
+/* Modal estilo Liga Valorant */
+.modal-content {
+  background: linear-gradient(145deg, #1a2a3a, #0f1923);
+  border: 2px solid #ff4655;
+  border-radius: 12px;
+  color: #fffbf5;
+  box-shadow: 0 8px 25px rgba(255, 70, 85, 0.25);
+}
+
+.modal-header {
+  border-bottom: 2px solid #ff4655;
+  background: #0f1923;
+  color: #ff4655;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.modal-title {
+  color: #ff4655;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.modal-body p {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.modal-body img {
+  border: 3px solid #ff4655;
+  border-radius: 10px;
+  background-color: #0f1923;
+  box-shadow: 0 4px 12px rgba(255, 70, 85, 0.2);
+}
+
+.modal-footer {
+  border-top: 2px solid #ff4655;
+  background-color: #0f1923;
+}
+
+.modal-footer .btn-secondary {
+  background: #243447;
+  color: #fffbf5;
+  border: none;
+}
+
+.modal-footer .btn-secondary:hover {
+  background: #ff4655;
+  color: #fffbf5;
+}

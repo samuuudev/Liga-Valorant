@@ -4,14 +4,15 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Liga Valorant</title>
+	<title>Liga Valorant | Equipos</title>
 
 	<!-- Css Bootstrap -->
 	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
 	<!-- Mi Css -->
-	<link rel="stylesheet" href="/css/mainStyle.css" />
+    <link rel="stylesheet" href="/css/mainStyle.css" />
     <link rel="stylesheet" href="/css/equipos.css">
+    <link rel="stylesheet" href="/css/modal.css">
 </head>
 
 <body>
@@ -25,7 +26,16 @@
 			<div class="text-center" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Home</a></li>
-					<li class="nav-item"><a class="nav-link" data-page="index.html" href="ligas.html">Ligas</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="/ligas.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Ligas
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/ligas.html#ligas-activas-pro">Liga Profesional</a></li>
+							<li><a class="dropdown-item" href="/ligas.html#ligas-activas-amateur">Liga Amateur</a></li>
+							<li><a class="dropdown-item" href="/ligas.html#ligas-inactivas-pro">Ligas inactivas</a></li>
+						</ul>
+					</li>
 					<li class="nav-item"><a class="nav-link active" data-page="index.html" href="equipos.html">Equipos</a></li>
 					<li class="nav-item"><a class="nav-link" data-page="index.html" href="jugadores.html">Jugadores</a></li>
 					<li class="nav-item"><a class="nav-link" data-page="index.html" href="arbitros.html">Arbitros</a></li>
@@ -34,7 +44,7 @@
 			</div>
 
 			<div class="text-end">
-				<button type="button" class="btn btn-primary">Iniciar sesion</button>
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_login">Iniciar sesion</button>
 			</div>
 		</div>
 	</nav>
@@ -66,11 +76,48 @@
     </nav>
 
 
+    <section id="modals">
+        <div class="modal" tabindex="-1" id="modal_login">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Iniciar sesión</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email" placeholder="Introduce tu correo">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="password" placeholder="Introduce tu contraseña">
+                            </div>
+                            <div class="form-check mb-3">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Recuérdame</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Iniciar sesión</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-link" data-bs-dismiss="modal">¿Olvidaste tu contraseña?</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
     <section id="clasificacion-equipos">
 
         <div  class="row">
             <!-- Liga Emea -->
             <div class="container col-md-3">
+                <h3 class="text-center">EMEA</h3>
                 <table class="table text-center" style="border-collapse: separate; border-spacing: 0;">
                     <thead style="background-color:#bd3944; color:#fffbf5;">
                         <tr>
@@ -125,6 +172,7 @@
     
             </div>
             <div class="container col-md-3">
+                <h3 class="text-center">AMERICAS</h3>
                 <table class="table text-center" style="border-collapse: separate; border-spacing: 0;">
                     <thead style="background-color:#bd3944; color:#fffbf5;">
                         <tr>
@@ -179,6 +227,7 @@
     
             </div>
             <div class="container col-md-3">
+                <h3 class="text-center">PACIFIC</h3>
                 <table class="table text-center" style="border-collapse: separate; border-spacing: 0;">
                     <thead style="background-color:#bd3944; color:#fffbf5;">
                         <tr>
@@ -233,6 +282,7 @@
     
             </div>
             <div class="container col-md-3">
+                <h3 class="text-center">CHINA</h3>
                 <table class="table text-center" style="border-collapse: separate; border-spacing: 0;">
                     <thead style="background-color:#bd3944; color:#fffbf5;">
                         <tr>
@@ -295,633 +345,370 @@
     <section id="equipos-ligas">
         <h2 class="text-center mt-5">Equipos por liga</h2>
         
-            <select class="form-select" id="filtroEquipo">
-                <option selected value="all">Todos</option>
-                <option value="EMEA">EMEA</option>
-                <option value="AMERICAS">America</option>
-                <option value="PACIFIC">Asia</option>
-                <option value="CN">China</option>
-            </select>
- 
-            <!-- Liga EMEA -->
-                <div class="row py-3" id="liga-emea">
-        
-                    <div class="col-2 d-flex justify-content-center" data-team="EMEA" data-type="team">
-                        <!-- Fnatic -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/FnaticTeam.webp" class="card-img-top" alt="FnaticTeam">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Fnatic</h5>
-                                <p class="card-text text-start">Equipo británico, campeón VCT EMEA y Masters Tokyo.</p>
-                                <a href="/equipos/fnatic.html" class="btn btn-primary text-center">Mas detalles...</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-2 d-flex justify-content-center" data-team="EMEA" data-type="team">
-                        <!-- Heretics -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/Team_Heretics.webp" class="card-img-top " alt="Team_Heretics">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Team Heretics</h5>
-                                <p class="card-text text-start">Equipo europeo competitivo del VCT EMEA, reconocido por alcanzar la final de Champions 2024 y ganar la Esports World Cup 2025</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="EMEA" data-type="team">
-                        <!-- Team Liquid -->
-                        <div class="card mx-2" style="width: 18rem;"  >
-                            <img src="assets/Images/equipos/Team_Liquid.webp" class="card-img-top" alt="Team_Liquid">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Team Liquid</h5>
-                                <p class="card-text text-start">Organización europea de esports con amplia trayectoria, compite en el VCT como uno de los equipos más reconocidos.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="EMEA" data-type="team">
-                        <!-- BBL Esports -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/BBL_Esports.webp" class="card-img-top" alt="BBLEsports">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">BBLEsports</h5>
-                                <p class="card-text text-start">.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                
-                    <div class="col-2 d-flex justify-content-center" data-team="EMEA" data-type="team">
-                        <!-- Natus Vincere -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/Natus_Vincere.webp" class="card-img-top" alt="Natus_Vincere">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Natus Vincere</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="EMEA" data-type="team">
-                        <!-- Fut esports -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/FUT.webp" class="card-img-top" alt="Fut Esports">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">FUT Esports</h5>
-                                <p class="card-text text-start">.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="row py-3" >
-        
-                    <div class="col-2 d-flex justify-content-center" data-team="EMEA" data-type="team">
-                        <!-- Karmine Corp -->
-                        <div class="card mx-2" style="width: 18rem;">
-                            <img src="assets/Images/equipos/Karmine_Corp.webp" class="card-img-top" alt="KarmineCorp">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">KarmineCorp</h5>
-                                <p class="card-text text-start">.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="EMEA" data-type="team" >
-                        <!-- Team Vitality -->
-                        <div class="card mx-2" style="width: 18rem;">
-                            <img src="assets/Images/equipos/Team_Vitality.webp" class="card-img-top" alt="Team_Vitality">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Team Vitality</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="col-2 d-flex justify-content-center" data-team="EMEA" data-type="team">
-                        <!-- KOI -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/KOI.webp" class="card-img-top" alt="KOI">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">KOI</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="EMEA" data-type="team">
-                        <!-- GIANTX -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/GIANTX.webp" class="card-img-top" alt="GIANTX">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">GIANTX</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="EMEA" data-type="team">
-                        <!-- Gentle Mates -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/Gentle_Mates.webp" class="card-img-top" alt="Gentle_Mates">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Gentle Mates</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="EMEA" data-type="team">
-                        <!-- Apeks -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/Apeks.webp" class="card-img-top" alt="Team_Apeks">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Apeks</h5>
-                                <p class="card-text text-start">.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <select class="form-select" id="filtroEquipo">
+            <option selected value="all">Todos</option>
+            <option value="EMEA">EMEA</option>
+            <option value="AMERICAS">America</option>
+            <option value="PACIFIC">Asia</option>
+            <option value="CN">China</option>
+        </select>
 
-                
-        
-            <!-- Liga AMERICAS -->
-        
-                <div class="row py-3" id="liga-americas">
-        
-                    <div class="col-2 d-flex justify-content-center" data-team="AMERICAS" data-type="team">
-                        <!-- Fnatic -->
-                        <div class="card mx-2" style="width: 18rem;"  >
-                            <img src="assets/Images/equipos/FnaticTeam.webp" class="card-img-top" alt="FnaticTeam">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Fnatic</h5>
-                                <p class="card-text text-start">Equipo ejemplo liga america</p>
-                                <a href="#" class="btn btn-primary text-center">Mas detalles...</a>
-                            </div>
-                        </div>
+        <!-- Liga EMEA -->
+        <div class="row py-3" id="liga-emea">
+            <!-- Solo tarjetas cuadradas con logo y nombre -->
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="EMEA" data-type="team">
+                <a href="equipos/fnatic.html" class="link-underline link-underline-opacity-0">
+                    <div class="team-card">
+                        <img src="assets/Images/equipos/FnaticTeam.webp" class="team-logo" alt="Fnatic">
+                        <div class="team-name">Fnatic</div>
                     </div>
-                    
-                    <div class="col-2 d-flex justify-content-center" data-team="AMERICAS" data-type="team">
-                        <!-- Heretics -->
-                        <div class="card mx-2" style="width: 18rem;"  >
-                            <img src="assets/Images/equipos/Team_Heretics.webp" class="card-img-top " alt="Team_Heretics">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Team Heretics</h5>
-                                <p class="card-text text-start">Equipo europeo competitivo del VCT EMEA, reconocido por alcanzar la final de Champions 2024 y ganar la Esports World Cup 2025</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="AMERICAS" data-type="team">
-                        <!-- Team Liquid -->
-                        <div class="card mx-2" style="width: 18rem;"  >
-                            <img src="assets/Images/equipos/Team_Liquid.webp" class="card-img-top" alt="Team_Liquid">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Team Liquid</h5>
-                                <p class="card-text text-start">Organización europea de esports con amplia trayectoria, compite en el VCT como uno de los equipos más reconocidos.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="AMERICAS" data-type="team">
-                        <!-- BBL Esports -->
-                        <div class="card mx-2" style="width: 18rem;"  >
-                            <img src="assets/Images/equipos/BBL_Esports.webp" class="card-img-top" alt="BBLEsports">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">BBLEsports</h5>
-                                <p class="card-text text-start">.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                
-                    <div class="col-2 d-flex justify-content-center" data-team="AMERICAS" data-type="team">
-                        <!-- Natus Vincere -->
-                        <div class="card mx-2" style="width: 18rem;"  >
-                            <img src="assets/Images/equipos/Natus_Vincere.webp" class="card-img-top" alt="Natus_Vincere">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Natus Vincere</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="AMERICAS" data-type="team">
-                        <!-- Fut esports -->
-                        <div class="card mx-2" style="width: 18rem;"  >
-                            <img src="assets/Images/equipos/FUT.webp" class="card-img-top" alt="Fut Esports">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">FUT Esports</h5>
-                                <p class="card-text text-start">.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-        
-                <div class="row">
-        
-                    <div class="col-2 d-flex justify-content-center" data-team="AMERICAS" data-type="team">
-                        <!-- Karmine Corp -->
-                        <div class="card mx-2" style="width: 18rem;"  >
-                            <img src="assets/Images/equipos/Karmine_Corp.webp" class="card-img-top" alt="KarmineCorp">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">KarmineCorp</h5>
-                                <p class="card-text text-start">.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="AMERICAS" data-type="team">
-                        <!-- Team Vitality -->
-                        <div class="card mx-2" style="width: 18rem;"  >
-                            <img src="assets/Images/equipos/Team_Vitality.webp" class="card-img-top" alt="Team_Vitality">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Team Vitality</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="col-2 d-flex justify-content-center" data-team="AMERICAS" data-type="team">
-                        <!-- KOI -->
-                        <div class="card mx-2" style="width: 18rem;"  >
-                            <img src="assets/Images/equipos/KOI.webp" class="card-img-top" alt="KOI">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">KOI</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="AMERICAS" data-type="team" >
-                        <!-- GIANTX -->
-                        <div class="card mx-2" style="width: 18rem;">
-                            <img src="assets/Images/equipos/GIANTX.webp" class="card-img-top" alt="GIANTX">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">GIANTX</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="AMERICAS" data-type="team">
-                        <!-- Gentle Mates -->
-                        <div class="card mx-2" style="width: 18rem;"  >
-                            <img src="assets/Images/equipos/Gentle_Mates.webp" class="card-img-top" alt="Gentle_Mates">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Gentle Mates</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="AMERICAS" data-type="team">
-                        <!-- Apeks -->
-                        <div class="card mx-2" style="width: 18rem;"  >
-                            <img src="assets/Images/equipos/Apeks.webp" class="card-img-top" alt="Team_Apeks">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Apeks</h5>
-                                <p class="card-text text-start">.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                </div>
+                </a>
+            </div>
             
-        
-            <!-- Liga Pacific -->
-        
-                <div class="row py-3" id="liga-pacific">
-        
-                    <div class="col-2 d-flex justify-content-center" data-team="PACIFIC" data-type="team">
-                        <!-- Fnatic -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/FnaticTeam.webp" class="card-img-top" alt="FnaticTeam">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Fnatic</h5>
-                                <p class="card-text text-start">Equipo ejemplo liga asiatica</p>
-                                <a href="#" class="btn btn-primary text-center">Mas detalles...</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-2 d-flex justify-content-center" data-team="PACIFIC" data-type="team">
-                        <!-- Heretics -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/Team_Heretics.webp" class="card-img-top " alt="Team_Heretics">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Team Heretics</h5>
-                                <p class="card-text text-start">Equipo europeo competitivo del VCT EMEA, reconocido por alcanzar la final de Champions 2024 y ganar la Esports World Cup 2025</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="PACIFIC" data-type="team">
-                        <!-- Team Liquid -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/Team_Liquid.webp" class="card-img-top" alt="Team_Liquid">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Team Liquid</h5>
-                                <p class="card-text text-start">Organización europea de esports con amplia trayectoria, compite en el VCT como uno de los equipos más reconocidos.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="PACIFIC" data-type="team">
-                        <!-- BBL Esports -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/BBL_Esports.webp" class="card-img-top" alt="BBLEsports">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">BBLEsports</h5>
-                                <p class="card-text text-start">.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                
-                    <div class="col-2 d-flex justify-content-center" data-team="PACIFIC" data-type="team">
-                        <!-- Natus Vincere -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/Natus_Vincere.webp" class="card-img-top" alt="Natus_Vincere">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Natus Vincere</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="PACIFIC" data-type="team">
-                        <!-- Fut esports -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/FUT.webp" class="card-img-top" alt="Fut Esports">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">FUT Esports</h5>
-                                <p class="card-text text-start">.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                        
-                    </div>
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="EMEA" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Team_Heretics.webp" class="team-logo" alt="Team Heretics">
+                    <div class="team-name">Team Heretics</div>
                 </div>
-        
-                <div class="row">
-        
-                    <div class="col-2 d-flex justify-content-center" data-team="PACIFIC" data-type="team">
-                        <!-- Karmine Corp -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/Karmine_Corp.webp" class="card-img-top" alt="KarmineCorp">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">KarmineCorp</h5>
-                                <p class="card-text text-start">.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="PACIFIC" data-type="team">
-                        <!-- Team Vitality -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/Team_Vitality.webp" class="card-img-top" alt="Team_Vitality">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Team Vitality</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="col-2 d-flex justify-content-center" data-team="PACIFIC" data-type="team">
-                        <!-- KOI -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/KOI.webp" class="card-img-top" alt="KOI">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">KOI</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="PACIFIC" data-type="team">
-                        <!-- GIANTX -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/GIANTX.webp" class="card-img-top" alt="GIANTX">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">GIANTX</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="PACIFIC" data-type="team">
-                        <!-- Gentle Mates -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/Gentle_Mates.webp" class="card-img-top" alt="Gentle_Mates">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Gentle Mates</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="PACIFIC" data-type="team">
-                        <!-- Apeks -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/Apeks.webp" class="card-img-top" alt="Team_Apeks">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Apeks</h5>
-                                <p class="card-text text-start">.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                </div>
+            </div>
             
-        
-            <!-- Liga CHINA -->
-        
-                <div class="row py-3" id="liga-china">
-        
-                    <div class="col-2 d-flex justify-content-center" data-team="CN" data-type="team">
-                        <!-- Fnatic -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/FnaticTeam.webp" class="card-img-top" alt="FnaticTeam">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Fnatic</h5>
-                                <p class="card-text text-start">Equipo ejemplo liga de china</p>
-                                <a href="#" class="btn btn-primary text-center">Mas detalles...</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-2 d-flex justify-content-center" data-team="CN" data-type="team">
-                        <!-- Heretics -->
-                        <div class="card mx-2" style="width: 18rem;">
-                            <img src="assets/Images/equipos/Team_Heretics.webp" class="card-img-top " alt="Team_Heretics">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Team Heretics</h5>
-                                <p class="card-text text-start">Equipo europeo competitivo del VCT EMEA, reconocido por alcanzar la final de Champions 2024 y ganar la Esports World Cup 2025</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="CN" data-type="team">
-                        <!-- Team Liquid -->
-                        <div class="card mx-2" style="width: 18rem;">
-                            <img src="assets/Images/equipos/Team_Liquid.webp" class="card-img-top" alt="Team_Liquid">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Team Liquid</h5>
-                                <p class="card-text text-start">Organización europea de esports con amplia trayectoria, compite en el VCT como uno de los equipos más reconocidos.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="CN" data-type="team">
-                        <!-- BBL Esports -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/BBL_Esports.webp" class="card-img-top" alt="BBLEsports">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">BBLEsports</h5>
-                                <p class="card-text text-start">.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                
-                    <div class="col-2 d-flex justify-content-center" data-team="CN" data-type="team">
-                        <!-- Natus Vincere -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/Natus_Vincere.webp" class="card-img-top" alt="Natus_Vincere">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Natus Vincere</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="CN" data-type="team">
-                        <!-- Fut esports -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/FUT.webp" class="card-img-top" alt="Fut Esports">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">FUT Esports</h5>
-                                <p class="card-text text-start">.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                        
-                    </div>
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="EMEA" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Team_Liquid.webp" class="team-logo" alt="Team Liquid">
+                    <div class="team-name">Team Liquid</div>
                 </div>
-        
-                <div class="row">
-        
-                    <div class="col-2 d-flex justify-content-center" data-team="CN" data-type="team">
-                        <!-- Karmine Corp -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/Karmine_Corp.webp" class="card-img-top" alt="KarmineCorp">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">KarmineCorp</h5>
-                                <p class="card-text text-start">.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="CN" data-type="team">
-                        <!-- Team Vitality -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/Team_Vitality.webp" class="card-img-top" alt="Team_Vitality">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Team Vitality</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="col-2 d-flex justify-content-center" data-team="CN" data-type="team">
-                        <!-- KOI -->
-                        <div class="card mx-2" style="width: 18rem;" >
-                            <img src="assets/Images/equipos/KOI.webp" class="card-img-top" alt="KOI">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">KOI</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center"  data-team="CN" data-type="team">
-                        <!-- GIANTX -->
-                        <div class="card mx-2" style="width: 18rem;">
-                            <img src="assets/Images/equipos/GIANTX.webp" class="card-img-top" alt="GIANTX">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">GIANTX</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="CN" data-type="team">
-                        <!-- Gentle Mates -->
-                        <div class="card mx-2" style="width: 18rem;">
-                            <img src="assets/Images/equipos/Gentle_Mates.webp" class="card-img-top" alt="Gentle_Mates">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Gentle Mates</h5>
-                                <p class="card-text text-start"></p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <div class="col-2 d-flex justify-content-center" data-team="CN" data-type="team">
-                        <!-- Apeks -->
-                        <div class="card mx-2" style="width: 18rem;">
-                            <img src="assets/Images/equipos/Apeks.webp" class="card-img-top" alt="Team_Apeks">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Apeks</h5>
-                                <p class="card-text text-start">.</p>
-                                <a href="#" class="btn btn-primary text-end">Mas detalles...</a>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="EMEA" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/BBL_Esports.webp" class="team-logo" alt="BBL Esports">
+                    <div class="team-name">BBL Esports</div>
                 </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="EMEA" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Natus_Vincere.webp" class="team-logo" alt="Natus Vincere">
+                    <div class="team-name">Natus Vincere</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="EMEA" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/FUT.webp" class="team-logo" alt="FUT Esports">
+                    <div class="team-name">FUT Esports</div>
+                </div>
+            </div>
+            
+            <!-- Segunda fila EMEA -->
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="EMEA" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Karmine_Corp.webp" class="team-logo" alt="Karmine Corp">
+                    <div class="team-name">Karmine Corp</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="EMEA" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Team_Vitality.webp" class="team-logo" alt="Team Vitality">
+                    <div class="team-name">Team Vitality</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="EMEA" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/KOI.webp" class="team-logo" alt="KOI">
+                    <div class="team-name">KOI</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="EMEA" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/GIANTX.webp" class="team-logo" alt="GIANTX">
+                    <div class="team-name">GIANTX</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="EMEA" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Gentle_Mates.webp" class="team-logo" alt="Gentle Mates">
+                    <div class="team-name">Gentle Mates</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="EMEA" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Apeks.webp" class="team-logo" alt="Apeks">
+                    <div class="team-name">Apeks</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Liga AMERICAS -->
+        <div class="row py-3" id="liga-americas">
+            <!-- Solo tarjetas cuadradas con logo y nombre -->
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="AMERICAS" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/FnaticTeam.webp" class="team-logo" alt="Fnatic">
+                    <div class="team-name">Fnatic</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="AMERICAS" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Team_Heretics.webp" class="team-logo" alt="Team Heretics">
+                    <div class="team-name">Team Heretics</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="AMERICAS" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Team_Liquid.webp" class="team-logo" alt="Team Liquid">
+                    <div class="team-name">Team Liquid</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="AMERICAS" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/BBL_Esports.webp" class="team-logo" alt="BBL Esports">
+                    <div class="team-name">BBL Esports</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="AMERICAS" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Natus_Vincere.webp" class="team-logo" alt="Natus Vincere">
+                    <div class="team-name">Natus Vincere</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="AMERICAS" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/FUT.webp" class="team-logo" alt="FUT Esports">
+                    <div class="team-name">FUT Esports</div>
+                </div>
+            </div>
+            
+            <!-- Segunda fila AMERICAS -->
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="AMERICAS" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Karmine_Corp.webp" class="team-logo" alt="Karmine Corp">
+                    <div class="team-name">Karmine Corp</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="AMERICAS" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Team_Vitality.webp" class="team-logo" alt="Team Vitality">
+                    <div class="team-name">Team Vitality</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="AMERICAS" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/KOI.webp" class="team-logo" alt="KOI">
+                    <div class="team-name">KOI</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="AMERICAS" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/GIANTX.webp" class="team-logo" alt="GIANTX">
+                    <div class="team-name">GIANTX</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="AMERICAS" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Gentle_Mates.webp" class="team-logo" alt="Gentle Mates">
+                    <div class="team-name">Gentle Mates</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="AMERICAS" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Apeks.webp" class="team-logo" alt="Apeks">
+                    <div class="team-name">Apeks</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row py-3" id="liga-pacific">
+            <!-- Solo tarjetas cuadradas con logo y nombre -->
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="PACIFIC" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/FnaticTeam.webp" class="team-logo" alt="Fnatic">
+                    <div class="team-name">Fnatic</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="PACIFIC" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Team_Heretics.webp" class="team-logo" alt="Team Heretics">
+                    <div class="team-name">Team Heretics</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="PACIFIC" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Team_Liquid.webp" class="team-logo" alt="Team Liquid">
+                    <div class="team-name">Team Liquid</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="PACIFIC" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/BBL_Esports.webp" class="team-logo" alt="BBL Esports">
+                    <div class="team-name">BBL Esports</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="PACIFIC" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Natus_Vincere.webp" class="team-logo" alt="Natus Vincere">
+                    <div class="team-name">Natus Vincere</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="PACIFIC" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/FUT.webp" class="team-logo" alt="FUT Esports">
+                    <div class="team-name">FUT Esports</div>
+                </div>
+            </div>
+            
+            <!-- Segunda fila PACIFIC -->
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="PACIFIC" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Karmine_Corp.webp" class="team-logo" alt="Karmine Corp">
+                    <div class="team-name">Karmine Corp</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="PACIFIC" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Team_Vitality.webp" class="team-logo" alt="Team Vitality">
+                    <div class="team-name">Team Vitality</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="PACIFIC" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/KOI.webp" class="team-logo" alt="KOI">
+                    <div class="team-name">KOI</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="PACIFIC" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/GIANTX.webp" class="team-logo" alt="GIANTX">
+                    <div class="team-name">GIANTX</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="PACIFIC" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Gentle_Mates.webp" class="team-logo" alt="Gentle Mates">
+                    <div class="team-name">Gentle Mates</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="PACIFIC" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Apeks.webp" class="team-logo" alt="Apeks">
+                    <div class="team-name">Apeks</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Liga CHINA - misma estructura -->
+        <div class="row py-3" id="liga-china">
+            <!-- Solo tarjetas cuadradas con logo y nombre -->
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="CN" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/FnaticTeam.webp" class="team-logo" alt="Fnatic">
+                    <div class="team-name">Fnatic</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="CN" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Team_Heretics.webp" class="team-logo" alt="Team Heretics">
+                    <div class="team-name">Team Heretics</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="CN" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Team_Liquid.webp" class="team-logo" alt="Team Liquid">
+                    <div class="team-name">Team Liquid</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="CN" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/BBL_Esports.webp" class="team-logo" alt="BBL Esports">
+                    <div class="team-name">BBL Esports</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="CN" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Natus_Vincere.webp" class="team-logo" alt="Natus Vincere">
+                    <div class="team-name">Natus Vincere</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="CN" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/FUT.webp" class="team-logo" alt="FUT Esports">
+                    <div class="team-name">FUT Esports</div>
+                </div>
+            </div>
+            
+            <!-- Segunda fila CN -->
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="CN" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Karmine_Corp.webp" class="team-logo" alt="Karmine Corp">
+                    <div class="team-name">Karmine Corp</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="CN" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Team_Vitality.webp" class="team-logo" alt="Team Vitality">
+                    <div class="team-name">Team Vitality</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="CN" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/KOI.webp" class="team-logo" alt="KOI">
+                    <div class="team-name">KOI</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="CN" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/GIANTX.webp" class="team-logo" alt="GIANTX">
+                    <div class="team-name">GIANTX</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="CN" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Gentle_Mates.webp" class="team-logo" alt="Gentle Mates">
+                    <div class="team-name">Gentle Mates</div>
+                </div>
+            </div>
+            
+            <div class="col-2 d-flex justify-content-center mb-4" data-team="CN" data-type="team">
+                <div class="team-card">
+                    <img src="assets/Images/equipos/Apeks.webp" class="team-logo" alt="Apeks">
+                    <div class="team-name">Apeks</div>
+                </div>
+            </div>
+        </div>
     </section>
 
 

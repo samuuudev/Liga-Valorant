@@ -1,5 +1,28 @@
-// Filtrado por equipos para la pagina equipos.html
 
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
+
+
+// Filtrado por ligas desde el navbar
+document.addEventListener('DOMContentLoaded', () => {
+
+
+    // Toasts
+
+    const toastElList = document.querySelectorAll('.toast')
+    const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl, option))
+    toastList.forEach(toast => toast.show());
+    // Fin toasts
+
+});
+
+
+
+// Filtrado por equipos para la pagina equipos.html
 function filtrarPorEquipo(idSelect, selectorElementos){
     const select= document.getElementById(idSelect);
 
@@ -55,5 +78,4 @@ function filtrarJugadores(selectEquipoId, selectLigaId, inputNombreId, selectorE
 
 // Llamada a la función
 filtrarJugadores('filtroEquipo', 'filtroLiga', 'buscarNombre', '[data-type="player"]');
-
 
