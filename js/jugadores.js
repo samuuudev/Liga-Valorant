@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
               </div>
               <div class="modal-body">
-                <img src="/assets/images/jugadores/${nombre}.webp" 
+                <img src="assets/images/jugadores/${nombre}.webp" 
                      alt="${nombre}" 
                      class="img-fluid rounded mb-3" 
                      style="max-height: 250px; object-fit: cover;">

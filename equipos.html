@@ -10,25 +10,34 @@
 	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
 	<!-- Mi Css -->
-    <link rel="stylesheet" href="/css/mainStyle.css" />
-    <link rel="stylesheet" href="/css/equipos.css">
-    <link rel="stylesheet" href="/css/modal.css">
+    <link rel="stylesheet" href="css/mainStyle.css" />
+    <link rel="stylesheet" href="css/equipos.css">
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 
 <body>
 
 
 
-	<!-- Nav bar normal sin colapsar para resoluciones grandes -->
 	<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" id="navbar_normal">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Liga Valorant</a>
 			<div class="text-center" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Home</a></li>
-							<li><a class="dropdown-item" href="/ligas.html#ligas-activas-pro">Liga Profesional</a></li>
-							<li><a class="dropdown-item" href="/ligas.html#ligas-activas-amateur">Liga Amateur</a></li>
-							<li><a class="dropdown-item" href="/ligas.html#ligas-inactivas-pro">Ligas inactivas</a></li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="ligas.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Ligas
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="ligas.html#ligas-activas-pro">Liga Profesional</a></li>
+							<li><a class="dropdown-item" href="ligas.html#ligas-activas-amateur">Liga Amateur</a></li>
+							<li><a class="dropdown-item" href="ligas.html#ligas-inactivas-pro">Ligas inactivas</a></li>
+						</ul>
+					</li>
+					
+
 					<li class="nav-item"><a class="nav-link active" data-page="index.html" href="equipos.html">Equipos</a></li>
 					<li class="nav-item"><a class="nav-link" data-page="index.html" href="jugadores.html">Jugadores</a></li>
 					<li class="nav-item"><a class="nav-link" data-page="index.html" href="arbitros.html">Arbitros</a></li>
@@ -37,7 +46,7 @@
 			</div>
 
 			<div class="text-end">
-				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_login">Iniciar sesion</button>
+				<button type="button" class="btn btn-primary">Iniciar sesion</button>
 			</div>
 		</div>
 	</nav>
@@ -121,42 +130,42 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><img src="/assets/images/equipos/FnaticTeam.webp" width="24" class="me-2">Fnatic</td>
+                            <td><img src="assets/images/equipos/FnaticTeam.webp" width="24" class="me-2">Fnatic</td>
                             <td>16</td>
                             <td>1.85</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/Team_Heretics.webp" width="24" class="me-2">Team Heretics</td>
+                            <td><img src="assets/images/equipos/Team_Heretics.webp" width="24" class="me-2">Team Heretics</td>
                             <td>14</td>
                             <td>1.78</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/G2.webp" width="24" class="me-2">G2 Esports</td>
+                            <td><img src="assets/images/equipos/G2.webp" width="24" class="me-2">G2 Esports</td>
                             <td>12</td>
                             <td>1.80</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/Team_Vitality.webp" width="24" class="me-2">Paper Rex</td>
+                            <td><img src="assets/images/equipos/Team_Vitality.webp" width="24" class="me-2">Paper Rex</td>
                             <td>12</td>
                             <td>2.05</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/FaZe.webp" width="24" class="me-2">FaZe Clan</td>
+                            <td><img src="assets/images/equipos/FaZe.webp" width="24" class="me-2">FaZe Clan</td>
                             <td>10</td>
                             <td>1.88</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/Natus_Vincere.webp" width="24" class="me-2">Natus Vincere</td>
+                            <td><img src="assets/images/equipos/Natus_Vincere.webp" width="24" class="me-2">Natus Vincere</td>
                             <td>8</td>
                             <td>1.92</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/Kinguin.webp" width="24" class="me-2">Kinguin</td>
+                            <td><img src="assets/images/equipos/Kinguin.webp" width="24" class="me-2">Kinguin</td>
                             <td>6</td>
                             <td>1.66</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
+                            <td><img src="assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
                             <td>4</td>
                             <td>1.99</td>
                         </tr>
@@ -176,42 +185,42 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><img src="/assets/images/equipos/FnaticTeam.webp" width="24" class="me-2">Fnatic</td>
+                            <td><img src="assets/images/equipos/FnaticTeam.webp" width="24" class="me-2">Fnatic</td>
                             <td>16</td>
                             <td>1.85</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/Team_Heretics.webp" width="24" class="me-2">Team Heretics</td>
+                            <td><img src="assets/images/equipos/Team_Heretics.webp" width="24" class="me-2">Team Heretics</td>
                             <td>14</td>
                             <td>1.78</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/G2.webp" width="24" class="me-2">G2 Esports</td>
+                            <td><img src="assets/images/equipos/G2.webp" width="24" class="me-2">G2 Esports</td>
                             <td>12</td>
                             <td>1.80</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/Team_Vitality.webp" width="24" class="me-2">Paper Rex</td>
+                            <td><img src="assets/images/equipos/Team_Vitality.webp" width="24" class="me-2">Paper Rex</td>
                             <td>12</td>
                             <td>2.05</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/FaZe.webp" width="24" class="me-2">FaZe Clan</td>
+                            <td><img src="assets/images/equipos/FaZe.webp" width="24" class="me-2">FaZe Clan</td>
                             <td>10</td>
                             <td>1.88</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/Natus_Vincere.webp" width="24" class="me-2">Natus Vincere</td>
+                            <td><img src="assets/images/equipos/Natus_Vincere.webp" width="24" class="me-2">Natus Vincere</td>
                             <td>8</td>
                             <td>1.92</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/Kinguin.webp" width="24" class="me-2">Kinguin</td>
+                            <td><img src="assets/images/equipos/Kinguin.webp" width="24" class="me-2">Kinguin</td>
                             <td>6</td>
                             <td>1.66</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
+                            <td><img src="assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
                             <td>4</td>
                             <td>1.99</td>
                         </tr>
@@ -231,42 +240,42 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><img src="/assets/images/equipos/FnaticTeam.webp" width="24" class="me-2">Fnatic</td>
+                            <td><img src="assets/images/equipos/FnaticTeam.webp" width="24" class="me-2">Fnatic</td>
                             <td>16</td>
                             <td>1.85</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/Team_Heretics.webp" width="24" class="me-2">Team Heretics</td>
+                            <td><img src="assets/images/equipos/Team_Heretics.webp" width="24" class="me-2">Team Heretics</td>
                             <td>14</td>
                             <td>1.78</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/G2.webp" width="24" class="me-2">G2 Esports</td>
+                            <td><img src="assets/images/equipos/G2.webp" width="24" class="me-2">G2 Esports</td>
                             <td>12</td>
                             <td>1.80</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/Team_Vitality.webp" width="24" class="me-2">Paper Rex</td>
+                            <td><img src="assets/images/equipos/Team_Vitality.webp" width="24" class="me-2">Paper Rex</td>
                             <td>12</td>
                             <td>2.05</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/FaZe.webp" width="24" class="me-2">FaZe Clan</td>
+                            <td><img src="assets/images/equipos/FaZe.webp" width="24" class="me-2">FaZe Clan</td>
                             <td>10</td>
                             <td>1.88</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/Natus_Vincere.webp" width="24" class="me-2">Natus Vincere</td>
+                            <td><img src="assets/images/equipos/Natus_Vincere.webp" width="24" class="me-2">Natus Vincere</td>
                             <td>8</td>
                             <td>1.92</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/Kinguin.webp" width="24" class="me-2">Kinguin</td>
+                            <td><img src="assets/images/equipos/Kinguin.webp" width="24" class="me-2">Kinguin</td>
                             <td>6</td>
                             <td>1.66</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
+                            <td><img src="assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
                             <td>4</td>
                             <td>1.99</td>
                         </tr>
@@ -286,42 +295,42 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><img src="/assets/images/equipos/FnaticTeam.webp" width="24" class="me-2">Fnatic</td>
+                            <td><img src="assets/images/equipos/FnaticTeam.webp" width="24" class="me-2">Fnatic</td>
                             <td>16</td>
                             <td>1.85</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/Team_Heretics.webp" width="24" class="me-2">Team Heretics</td>
+                            <td><img src="assets/images/equipos/Team_Heretics.webp" width="24" class="me-2">Team Heretics</td>
                             <td>14</td>
                             <td>1.78</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/G2.webp" width="24" class="me-2">G2 Esports</td>
+                            <td><img src="assets/images/equipos/G2.webp" width="24" class="me-2">G2 Esports</td>
                             <td>12</td>
                             <td>1.80</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/Team_Vitality.webp" width="24" class="me-2">Paper Rex</td>
+                            <td><img src="assets/images/equipos/Team_Vitality.webp" width="24" class="me-2">Paper Rex</td>
                             <td>12</td>
                             <td>2.05</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/FaZe.webp" width="24" class="me-2">FaZe Clan</td>
+                            <td><img src="assets/images/equipos/FaZe.webp" width="24" class="me-2">FaZe Clan</td>
                             <td>10</td>
                             <td>1.88</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/Natus_Vincere.webp" width="24" class="me-2">Natus Vincere</td>
+                            <td><img src="assets/images/equipos/Natus_Vincere.webp" width="24" class="me-2">Natus Vincere</td>
                             <td>8</td>
                             <td>1.92</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/Kinguin.webp" width="24" class="me-2">Kinguin</td>
+                            <td><img src="assets/images/equipos/Kinguin.webp" width="24" class="me-2">Kinguin</td>
                             <td>6</td>
                             <td>1.66</td>
                         </tr>
                         <tr>
-                            <td><img src="/assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
+                            <td><img src="assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
                             <td>4</td>
                             <td>1.99</td>
                         </tr>
@@ -719,9 +728,9 @@
 	</footer>
 
     	<!-- Ref js -->
-    <script src="/js/mainJs.js"></script>
+    <script src="js/mainJs.js"></script>
     
-	<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
