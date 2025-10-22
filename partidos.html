@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Valorant Esports - Bootstrap Mockup</title>
+  <!-- Enlace al CSS de Bootstrap (desde CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/partidos.css">
+  <link rel="stylesheet" href="css/mainStyle.css">
+</head>
+<body>
+
+  <!-- NAVBAR de Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <!-- Logo y nombre -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <div class="logo">V</div>
+        <span>Valorant Esports</span>
+      </a>
+
+      <!-- Menú colapsable -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Equipos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Resultados</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="container my-4">
+
+    <!-- Sección principal -->
+    <section class="p-4 bg-dark rounded-3 mb-4">
+      <div class="row align-items-center">
+        <!-- Columna izquierda -->
+        <div class="col-md-7">
+          <h1 class="fw-bold">Próximos encuentros</h1>
+          <p class="text-secondary">Calendario y resultados ficticios para pruebas o integración.</p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-danger">Seguir torneo</button>
+            <button class="btn btn-outline-light">Filtrar</button>
+          </div>
+        </div>
+        <!-- Columna derecha -->
+        <div class="col-md-5 text-md-end mt-3 mt-md-0">
+          <p class="text-secondary mb-1">Próximo partido destacado</p>
+          <strong>Sentinels vs G2 — 22 oct 2025 · 20:00 CET</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Título -->
+    <h2 class="h4 mb-3">Partidos destacados</h2>
+
+    <!-- GRID de partidos -->
+    <div class="row g-3">
+
+      <!-- Partido 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="match-card">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-2">
+              <div class="badge-team">SN</div>
+              <span>Sentinels</span>
+            </div>
+            <span class="text-secondary">vs</span>
+            <div class="d-flex align-items-center gap-2">
+              <div class="badge-team">G2</div>
+              <span>G2 Esports</span>
+            </div>
+            <!-- Resultado centrado -->
+				<div class="d-flex flex-column align-items-center justify-content-center text-center mx-3">
+				<h4 class="fw-bold mb-1">— : —</h4>
+				<small class="text-muted">22 Oct 2025 · 20:00 CET</small>
+				</div>
+
+        </div>
+      </div>
+
+      <!-- Partido 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="match-card">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-2">
+              <div class="badge-team">SN</div>
+              <span>Sentinels</span>
+            </div>
+            <span class="text-secondary">vs</span>
+            <div class="d-flex align-items-center gap-2">
+              <div class="badge-team">G2</div>
+              <span>G2 Esports</span>
+            </div>
+            <!-- Resultado centrado -->
+				<div class="d-flex flex-column align-items-center justify-content-center text-center mx-3">
+				<h4 class="fw-bold mb-1">— : —</h4>
+				<small class="text-muted">22 Oct 2025 · 20:00 CET</small>
+				</div>
+
+        </div>
+      </div>
+      <!-- Partido 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="match-card">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-2">
+              <div class="badge-team">EDG</div>
+              <span>EDward Gaming</span>
+            </div>
+            <span class="text-secondary">vs</span>
+            <div class="d-flex align-items-center gap-2">
+              <div class="badge-team">KR</div>
+              <span>KR Champions</span>
+            </div>
+            <div class="fw-bold">2 : 1</div>
+          </div>
+          <div class="status finished">Finalizado · 20 oct 2025</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+<section class="container my-5">
+      <h2 class="text-center mb-4">Partidos Destacados</h2>
+      <div class="row g-4">
+        <!-- Partido 1 -->
+        <div class="col-md-4">
+          <div class="card text-center">
+            <img src="https://upload.wikimedia.org/wikipedia/en/7/70/Sentinels_logo.png" class="card-img-top" alt="Sentinels" />
+            <div class="card-body">
+              <h5 class="card-title">Sentinels vs G2</h5>
+              <p class="card-text">22 Oct 2025 · 20:00 CET</p>
+              <a href="#" class="btn btn-primary">Ver detalles</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partido 2 -->
+        <div class="col-md-4">
+          <div class="card text-center">
+            <img src="https://upload.wikimedia.org/wikipedia/en/3/34/Fnatic_Logo.svg" class="card-img-top" alt="Fnatic" />
+            <div class="card-body">
+              <h5 class="card-title">Fnatic vs Team Liquid</h5>
+              <p class="card-text">23 Oct 2025 · 18:00 CET</p>
+              <a href="#" class="btn btn-primary">Ver detalles</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partido 3 -->
+        <div class="col-md-4">
+          <div class="card text-center">
+            <img src="https://upload.wikimedia.org/wikipedia/en/e/ea/Team_Vitality_logo.svg" class="card-img-top" alt="Vitality" />
+            <div class="card-body">
+              <h5 class="card-title">Vitality vs NRG</h5>
+              <p class="card-text">24 Oct 2025 · 21:30 CET</p>
+              <a href="#" class="btn btn-primary">Ver detalles</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+	 <!-- TABLA DE RESULTADOS -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Resultados Recientes</h2>
+      <div class="table-responsive">
+        <table class="table text-center align-middle">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Equipo A</th>
+              <th>Resultado</th>
+              <th>Equipo B</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>20 Oct 2025</td>
+              <td>LOUD</td>
+              <td>2 : 1</td>
+              <td>NRG</td>
+            </tr>
+            <tr>
+              <td>19 Oct 2025</td>
+              <td>Fnatic</td>
+              <td>0 : 2</td>
+              <td>Sentinels</td>
+            </tr>
+            <tr>
+              <td>18 Oct 2025</td>
+              <td>G2</td>
+              <td>1 : 2</td>
+              <td>Team Liquid</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+
+	 <section class="hero-section d-flex align-items-center justify-content-center text-center mt-5">
+      <div class="container">
+        <h1 class="display-5 fw-bold">Partidos y Resultados</h1>
+        <p>Consulta los próximos enfrentamientos y resultados oficiales del circuito VALORANT.</p>
+      </div>
+    </section>
+
+    <!-- PARTIDOS -->
+    <div class="container my-5" id="partidos">
+      <h2 class="text-center mb-4">Próximos Partidos</h2>
+
+		<div class="container" id="partidos-mañana">
+			<h3 class="mb-4">Mañana</h3>
+		 <!-- Partido 1 -->
+		<div class="card mb-4 p-3">
+			<div class="d-flex justify-content-between align-items-center">
+
+				<!-- Equipo A -->
+				<div class="d-flex align-items-center">
+				<img src="assets/Images/equipos/FnaticTeam.webp" alt="Fnatic" width="60" class="me-3" />
+				<span class="fw-bold text-uppercase">Fnatic</span>
+				</div>
+
+				<!-- Resultado con logo de liga centrado -->
+				<div class="d-flex flex-column align-items-center justify-content-center text-center mx-3">
+				<!-- Logo de la liga -->
+				<img src="assets/Images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" alt="Liga" width="50" class="mb-1" />
+				<h4 class="fw-bold mb-1">- : -</h4>
+				<small class="text-muted">22 Oct 2025 · 20:00 CET</small>
+				</div>
+
+				<!-- Equipo B -->
+				<div class="d-flex align-items-center">
+				<span class="fw-bold text-uppercase me-3">BBL ESPORTS</span>
+				<img src="assets/Images/equipos/BBL_Esports.webp" alt="BBL" width="60" />
+				</div>
+			</div>
+		</div>
+
+     	  <!-- Partido 2 -->
+		<div class="card mb-4 p-3">
+			<div class="d-flex justify-content-between align-items-center">
+
+				<!-- Equipo A -->
+				<div class="d-flex align-items-center">
+				<img src="assets/Images/equipos/FnaticTeam.webp" alt="Fnatic" width="60" class="me-3" />
+				<span class="fw-bold text-uppercase">Fnatic</span>
+				</div>
+
+				<!-- Resultado con logo de liga centrado -->
+				<div class="d-flex flex-column align-items-center justify-content-center text-center mx-3">
+				<!-- Logo de la liga -->
+				<img src="assets/Images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" alt="Liga" width="50" class="mb-1" />
+				<h4 class="fw-bold mb-1">- : -</h4>
+				<small class="text-muted">22 Oct 2025 · 20:00 CET</small>
+				</div>
+
+				<!-- Equipo B -->
+				<div class="d-flex align-items-center">
+				<span class="fw-bold text-uppercase me-3">BBL ESPORTS</span>
+				<img src="assets/Images/equipos/BBL_Esports.webp" alt="BBL" width="60" />
+				</div>
+			</div>
+		</div>
+	  <!-- Partido 1 -->
+		<div class="card mb-4 p-3">
+			<div class="d-flex justify-content-between align-items-center">
+
+				<!-- Equipo A -->
+				<div class="d-flex align-items-center">
+				<img src="assets/Images/equipos/FnaticTeam.webp" alt="Fnatic" width="60" class="me-3" />
+				<span class="fw-bold text-uppercase">Fnatic</span>
+				</div>
+
+				<!-- Resultado con logo de liga centrado -->
+				<div class="d-flex flex-column align-items-center justify-content-center text-center mx-3">
+				<!-- Logo de la liga -->
+				<img src="assets/Images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" alt="Liga" width="50" class="mb-1" />
+				<h4 class="fw-bold mb-1">- : -</h4>
+				<small class="text-muted">22 Oct 2025 · 20:00 CET</small>
+				</div>
+
+				<!-- Equipo B -->
+				<div class="d-flex align-items-center">
+				<span class="fw-bold text-uppercase me-3">BBL ESPORTS</span>
+				<img src="assets/Images/equipos/BBL_Esports.webp" alt="BBL" width="60" />
+				</div>
+			</div>
+		</div>
+	  </div>
+
+	  <div class="container" id="partidos-hoy">
+		<h3 class="mb-4">Hoy</h3>
+		 <!-- Partido 1 -->
+		<div class="card mb-4 p-3">
+			<div class="d-flex justify-content-between align-items-center">
+
+				<!-- Equipo A -->
+				<div class="d-flex align-items-center">
+				<img src="assets/Images/equipos/FnaticTeam.webp" alt="Fnatic" width="60" class="me-3" />
+				<span class="fw-bold text-uppercase">Fnatic</span>
+				</div>
+
+				<!-- Resultado con logo de liga centrado -->
+				<div class="d-flex flex-column align-items-center justify-content-center text-center mx-3">
+				<!-- Logo de la liga -->
+				<img src="assets/Images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" alt="Liga" width="50" class="mb-1" />
+				<h4 class="fw-bold mb-1">2 : 1</h4>
+				<small class="text-muted">22 Oct 2025 · 20:00 CET</small>
+				</div>
+
+				<!-- Equipo B -->
+				<div class="d-flex align-items-center">
+				<span class="fw-bold text-uppercase me-3">BBL ESPORTS</span>
+				<img src="assets/Images/equipos/BBL_Esports.webp" alt="BBL" width="60" />
+				</div>
+			</div>
+		</div>
+
+     	  <!-- Partido 2 -->
+		<div class="card mb-4 p-3">
+			<div class="d-flex justify-content-between align-items-center">
+
+				<!-- Equipo A -->
+				<div class="d-flex align-items-center">
+				<img src="assets/Images/equipos/FnaticTeam.webp" alt="Fnatic" width="60" class="me-3" />
+				<span class="fw-bold text-uppercase">Fnatic</span>
+				</div>
+
+				<!-- Resultado con logo de liga centrado -->
+				<div class="d-flex flex-column align-items-center justify-content-center text-center mx-3">
+				<!-- Logo de la liga -->
+				<img src="assets/Images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" alt="Liga" width="50" class="mb-1" />
+				<h4 class="fw-bold mb-1">2 : 1</h4>
+				<small class="text-muted">22 Oct 2025 · 20:00 CET</small>
+				</div>
+
+				<!-- Equipo B -->
+				<div class="d-flex align-items-center">
+				<span class="fw-bold text-uppercase me-3">BBL ESPORTS</span>
+				<img src="assets/Images/equipos/BBL_Esports.webp" alt="BBL" width="60" />
+				</div>
+			</div>
+		</div>
+	  <!-- Partido 1 -->
+		<div class="card mb-4 p-3">
+			<div class="d-flex justify-content-between align-items-center">
+
+				<!-- Equipo A -->
+				<div class="d-flex align-items-center">
+				<img src="assets/Images/equipos/FnaticTeam.webp" alt="Fnatic" width="60" class="me-3" />
+				<span class="fw-bold text-uppercase">Fnatic</span>
+				</div>
+
+				<!-- Resultado con logo de liga centrado -->
+				<div class="d-flex flex-column align-items-center justify-content-center text-center mx-3">
+				<!-- Logo de la liga -->
+				<img src="assets/Images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" alt="Liga" width="50" class="mb-1" />
+				<h4 class="fw-bold mb-1">2 : 1</h4>
+				<small class="text-muted">22 Oct 2025 · 20:00 CET</small>
+				</div>
+
+				<!-- Equipo B -->
+				<div class="d-flex align-items-center">
+				<span class="fw-bold text-uppercase me-3">BBL ESPORTS</span>
+				<img src="assets/Images/equipos/BBL_Esports.webp" alt="BBL" width="60" />
+				</div>
+			</div>
+		</div>
+	  </div>
+
+	  <div class="container" id="partidos-ayer">
+		<h3 class="mb-4">Ayer</h3>
+		 <!-- Partido 1 -->
+		<div class="card mb-4 p-3">
+			<div class="d-flex justify-content-between align-items-center">
+
+				<!-- Equipo A -->
+				<div class="d-flex align-items-center">
+				<img src="assets/Images/equipos/FnaticTeam.webp" alt="Fnatic" width="60" class="me-3" />
+				<span class="fw-bold text-uppercase">Fnatic</span>
+				</div>
+
+				<!-- Resultado con logo de liga centrado -->
+				<div class="d-flex flex-column align-items-center justify-content-center text-center mx-3">
+				<!-- Logo de la liga -->
+				<img src="assets/Images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" alt="Liga" width="50" class="mb-1" />
+				<h4 class="fw-bold mb-1">2 : 1</h4>
+				<small class="text-muted">22 Oct 2025 · 20:00 CET</small>
+				</div>
+
+				<!-- Equipo B -->
+				<div class="d-flex align-items-center">
+				<span class="fw-bold text-uppercase me-3">BBL ESPORTS</span>
+				<img src="assets/Images/equipos/BBL_Esports.webp" alt="BBL" width="60" />
+				</div>
+			</div>
+		</div>
+
+     	  <!-- Partido 2 -->
+		<div class="card mb-4 p-3">
+			<div class="d-flex justify-content-between align-items-center">
+
+				<!-- Equipo A -->
+				<div class="d-flex align-items-center">
+				<img src="assets/Images/equipos/FnaticTeam.webp" alt="Fnatic" width="60" class="me-3" />
+				<span class="fw-bold text-uppercase">Fnatic</span>
+				</div>
+
+				<!-- Resultado con logo de liga centrado -->
+				<div class="d-flex flex-column align-items-center justify-content-center text-center mx-3">
+				<!-- Logo de la liga -->
+				<img src="assets/Images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" alt="Liga" width="50" class="mb-1" />
+				<h4 class="fw-bold mb-1">2 : 1</h4>
+				<small class="text-muted">22 Oct 2025 · 20:00 CET</small>
+				</div>
+
+				<!-- Equipo B -->
+				<div class="d-flex align-items-center">
+				<span class="fw-bold text-uppercase me-3">BBL ESPORTS</span>
+				<img src="assets/Images/equipos/BBL_Esports.webp" alt="BBL" width="60" />
+				</div>
+			</div>
+		</div>
+	  <!-- Partido 1 -->
+		<div class="card mb-4 p-3">
+			<div class="d-flex justify-content-between align-items-center">
+
+				<!-- Equipo A -->
+				<div class="d-flex align-items-center">
+				<img src="assets/Images/equipos/FnaticTeam.webp" alt="Fnatic" width="60" class="me-3" />
+				<span class="fw-bold text-uppercase">Fnatic</span>
+				</div>
+
+				<!-- Resultado con logo de liga centrado -->
+				<div class="d-flex flex-column align-items-center justify-content-center text-center mx-3">
+				<!-- Logo de la liga -->
+				<img src="assets/Images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" alt="Liga" width="50" class="mb-1" />
+				<h4 class="fw-bold mb-1">2 : 1</h4>
+				<small class="text-muted">22 Oct 2025 · 20:00 CET</small>
+				</div>
+
+				<!-- Equipo B -->
+				<div class="d-flex align-items-center">
+				<span class="fw-bold text-uppercase me-3">BBL ESPORTS</span>
+				<img src="assets/Images/equipos/BBL_Esports.webp" alt="BBL" width="60" />
+				</div>
+			</div>
+		</div>
+	  </div>
+
+
+	 
+
+
+
+  <!-- FOOTER -->
+  <footer class="text-center text-secondary py-4">
+    Mockup para desarrollo. Todos los datos son ficticios.
+  </footer>
+
+  <!-- Scripts de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+/* Ajustes de estilo para tarjetas horizontales */
+.card {
+  background: none !important; /* elimina fondo degradado */
+  border: none !important; /* elimina el borde rojo */
+  box-shadow: none !important; /* sin sombra */
+  color: #fffbf5; /* texto blanco */
+}
+
+/* Asegura que todos los párrafos sean blancos */
+p,
+.card-text,
+.text-muted,
+small {
+  color: #fffbf5 !important;
+}
+
+/* Ajusta el contenedor de partidos */
+.card .fw-bold {
+  color: #fffbf5; /* nombres de equipos blancos */
+}
+
+.card h4 {
+  color: #ff4655; /* marcador en rojo Valorant */
+}
+
+/* Al pasar el ratón, un leve brillo */
+.card:hover {
+  background-color: rgba(255, 70, 85, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+/* Evita que los textos se peguen demasiado */
+.card .text-center small {
+  display: block;
+  margin-top: 4px;
+}
+
+#partidos .container{
+  background-color: #0f1923; /* fondo oscuro para la sección de partidos */
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+#partidos .card {
+  background-color: #1a2a3a !important; /* fondo ligeramente más claro para las tarjetas */
+  border: 1px solid #ff4655 !important; /* borde rojo Valorant */
+}
