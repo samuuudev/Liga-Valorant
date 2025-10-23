@@ -135,6 +135,72 @@
     border-radius: 4px;
 }
 
+
+/* ===== HEADER EQUIPOS ===== */
+#header-equipos {
+  background: linear-gradient(rgba(15, 25, 35, 0.8), rgba(15, 25, 35, 0.95)),
+              url('/assets/Images/LNY_Sage-Wallpapers/Static/LNY_Sage-2_ShoppingB.jpg') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fffbf5;
+  padding: 0 1rem;
+}
+
+#header-equipos .header-content {
+  max-width: 700px;
+}
+
+#header-equipos h1 {
+  color: #ff4655;
+  font-weight: 800;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+#header-equipos p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+#header-equipos .btn-primary {
+  background: linear-gradient(45deg, #ff4655, #ff5e6c);
+  border: none;
+  border-radius: 6px;
+  color: #fffbf5;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#header-equipos .btn-primary:hover {
+  background: linear-gradient(45deg, #ff5e6c, #ff4655);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #header-equipos {
+    height: 60vh;
+  }
+
+  #header-equipos h1 {
+    font-size: 1.8rem;
+  }
+
+  #header-equipos p {
+    font-size: 1rem;
+  }
+}
+
+
 /* Responsive design */
 @media (max-width: 1200px) {
     #equipos-ligas .col-2 {

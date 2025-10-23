@@ -5,12 +5,17 @@
   animation: ease-in 0.3s;
 }
 
-/* Fondo global mejorado */
+/* Body */
 body {
   background:#1a2a3a;
   color: #fffbf5;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
+}
+
+header {
+  background-size: cover;
+  height: 25rem;
 }
 
 /* Navbar mejorado */
@@ -175,10 +180,6 @@ body {
   padding: 1.5rem;
   background-color: #0f1923;
   border-bottom: 2px solid #ff4655;
-}
-
-.card:hover .card-img-top {
-
 }
 
 /* Botones mejorados */
@@ -366,6 +367,9 @@ h2 {
   }
 }
 
+.card {
+  animation: fadeInUp 0.6s ease-out;
+}
 @media (min-width: 992px) {
   #navbar_normal {
     display: block;
@@ -393,10 +397,6 @@ h2 {
     padding: 1rem;
   }
 
-}
-
-.card {
-  animation: fadeInUp 0.6s ease-out;
 }
 
 @keyframes fadeInUp {
