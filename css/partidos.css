@@ -46,3 +46,46 @@ small {
   background-color: #1a2a3a !important; /* fondo ligeramente más claro para las tarjetas */
   border: 1px solid #ff4655 !important; /* borde rojo Valorant */
 }
+
+#tabla-equipos {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #fffbf5;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  text-align: left;
+}
+
+#tabla-equipos tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* separadores sutiles */
+}
+
+
+#tabla-equipos td {
+  padding: 10px 8px;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+#tabla-equipos td img {
+  display: block;
+  border-radius: 4px;
+}
+
+/* Efecto hover para destacar fila */
+#tabla-equipos tr:hover {
+  background-color: rgba(255, 70, 85, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.content-fixed{
+  position: sticky;
+  top: 80px; /* ajusta según la altura de tu navbar */
+  align-self: flex-start; /* evita que se estire con el row */
+  height: fit-content;
+  z-index: 100; /* por si hay sombras o bordes */
+}

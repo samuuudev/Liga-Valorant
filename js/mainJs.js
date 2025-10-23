@@ -1,25 +1,11 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const btnLogin = document.getElementById("btnLogin");
+  const modalLogin = new bootstrap.Modal(document.getElementById("modal_login"));
 
-const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
-
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus()
-})
-
-
-// Filtrado por ligas desde el navbar
-document.addEventListener('DOMContentLoaded', () => {
-
-
-    // Toasts
-
-    const toastElList = document.querySelectorAll('.toast')
-    const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl, option))
-    toastList.forEach(toast => toast.show());
-    // Fin toasts
-
+  btnLogin.addEventListener("click", () => {
+    modalLogin.show();
+  });
 });
-
 
 
 // Filtrado por equipos para la pagina equipos.html

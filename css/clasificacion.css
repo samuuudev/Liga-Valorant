@@ -1,0 +1,95 @@
+header{
+    background-image: url('/assets/Images/LNY_Sage-Wallpapers/Static/LNY_Sage-2_ShoppingB.jpg');
+    background-size: cover;
+    height: 25rem;
+}
+
+
+/* Sección de clasificación */
+#clasificacion-equipos {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+#clasificacion-equipos h3 {
+  color: #ff4655;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* Contenedor de cada bloque de liga */
+.contenedor-clasificacion-tablas {
+  border: 2px solid #ff4655;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(255, 70, 85, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contenedor-clasificacion-tablas:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(255, 70, 85, 0.25);
+}
+
+/* Ajustes de las tablas */
+#clasificacion-equipos table {
+  background: transparent;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95rem;
+  color: #fffbf5;
+}
+
+#clasificacion-equipos th, 
+#clasificacion-equipos td {
+  border: none;
+  padding: 0.75rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#clasificacion-equipos thead th {
+  background-color: #ff4655;
+  color: #fffbf5;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+
+#clasificacion-equipos tbody tr:hover {
+  background-color: rgba(255, 70, 85, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+/* Imagen del logo de equipo */
+#clasificacion-equipos td img {
+  vertical-align: middle;
+}
+
+/* Grid responsivo para las ligas */
+@media (min-width: 992px) {
+  #clasificacion-equipos .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
+
+/* Vista móvil */
+@media (max-width: 768px) {
+  #clasificacion-equipos {
+    padding: 2rem 1rem;
+  }
+
+  .contenedor-clasificacion-tablas {
+    width: 100%;
+  }
+
+  #clasificacion-equipos table {
+    font-size: 0.85rem;
+  }
+}
