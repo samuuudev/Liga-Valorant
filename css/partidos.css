@@ -84,8 +84,24 @@ small {
 
 .content-fixed{
   position: sticky;
-  top: 80px; /* ajusta según la altura de tu navbar */
+  top: 70px; /* ajusta según la altura de tu navbar */
   align-self: flex-start; /* evita que se estire con el row */
   height: fit-content;
   z-index: 100; /* por si hay sombras o bordes */
+}
+
+
+@media (max-width: 768px) {
+  #partidos-ligas {
+      width: 100%;
+      background-color: #1a2a3a; /* tu color de fondo */
+      padding: 10px 0; /* opcional, para espacio arriba y abajo */
+  }
+  .container.align-items-center {
+      padding: 0 10px; /* espacio interno */
+  }
+
+  .partidos-vacio {
+    display: none;
+  }
 }

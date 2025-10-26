@@ -4,6 +4,9 @@ header{
     height: 25rem;
 }
 
+#clasificacion-header{
+  height: 30% !important;
+}
 
 /* Sección de clasificación */
 #clasificacion-equipos {

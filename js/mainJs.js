@@ -28,8 +28,11 @@ function filtrarPorEquipo(idSelect, selectorElementos){
     mostrarElemento();
 
 }
-// llamda a la funcion
-filtrarPorEquipo('filtroEquipo', '[data-type="team"]');
+
+if (document.getElementById('filtroEquipo')) {
+  filtrarPorEquipo('filtroEquipo', '[data-type="team"]');
+}
+
 
 // Filtrado por equipo, liga y nombre
 function filtrarJugadores(selectEquipoId, selectLigaId, inputNombreId, selectorElementos) {
@@ -62,6 +65,10 @@ function filtrarJugadores(selectEquipoId, selectLigaId, inputNombreId, selectorE
     mostrarElementos();
 }
 
-// Llamada a la función
-filtrarJugadores('filtroEquipo', 'filtroLiga', 'buscarNombre', '[data-type="player"]');
-
+if (
+  document.getElementById('filtroEquipo') &&
+  document.getElementById('filtroLiga') &&
+  document.getElementById('buscarNombre')
+) {
+  filtrarJugadores('filtroEquipo', 'filtroLiga', 'buscarNombre', '[data-type="player"]');
+}

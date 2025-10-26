@@ -15,9 +15,6 @@
 </head>
 
 <body>
-
-  
-  <script src="js/mainJs.js"></script>
   <!-- <script src="/js/jugadores.js"></script> -->
 
   <!-- Script temporal, se eliminara, por eso esta aqui -->
@@ -133,25 +130,23 @@
       });
   </script>
 
-  <!-- Referencia al script de bootstrap -->
-  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
 	<!-- Nav bar normal sin colapsar para resoluciones grandes -->
 	<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" id="navbar_normal">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Liga Valorant</a>
 			<div class="text-center" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Inicio</a></li>
 
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="ligas.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Ligas
 						</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="ligas.html#ligas-activas-pro">Liga Profesional</a></li>
-							<li><a class="dropdown-item" href="ligas.html#ligas-activas-amateur">Liga Amateur</a></li>
-							<li><a class="dropdown-item" href="ligas.html#ligas-inactivas-pro">Ligas inactivas</a></li>
+                            <li><a class="dropdown-item" href="/ligas.html">Inicio</a></li>
+							<li><a class="dropdown-item" href="/ligas.html#ligas-activas-pro">Liga Profesional</a></li>
+							<li><a class="dropdown-item" href="/ligas.html#ligas-activas-amateur">Liga Amateur</a></li>
+							<li><a class="dropdown-item" href="/ligas.html#ligas-inactivas-pro">Ligas inactivas</a></li>
 						</ul>
 					</li>
 					
@@ -184,19 +179,32 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" data-page="index.html" href="ligas.html">Ligas</a></li>
-                        <li class="nav-item"><a class="nav-link" data-page="index.html" href="equipos.html">Equipos</a></li>
-                        <li class="nav-item"><a class="nav-link active" data-page="index.html" href="jugadores.html">Jugadores</a></li>
-                        <li class="nav-item"><a class="nav-link" data-page="index.html" href="arbitros.html">Arbitros</a></li>
-                        <li class="nav-item"><a class="nav-link" data-page="index.html" href="inscripcion.html">Inscripcion</a></li>
-                    </ul>
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Inicio</a></li>
+
+						<li class="nav-item">
+							<a class="nav-link" data-bs-toggle="collapse" href="#submenuLigas" role="button" aria-expanded="false" aria-controls="submenuLigas">
+								Ligas
+							</a>
+							<div class="collapse" id="submenuLigas">
+								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ps-3">
+								<li><a href="ligas.html" class="nav-link">Inicio</a></li>
+								<li><a href="ligas.html#ligas-activas-pro" class="nav-link">Liga Profesional</a></li>
+								<li><a href="ligas.html#ligas-activas-amateur" class="nav-link">Liga Amateur</a></li>
+								<li><a href="ligas.html#ligas-inactivas-pro" class="nav-link">Ligas inactivas</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item"><a class="nav-link" data-page="index.html" href="equipos.html">Equipos</a></li>
+						<li class="nav-item"><a class="nav-link active" data-page="index.html" href="jugadores.html">Jugadores</a></li>
+						<li class="nav-item"><a class="nav-link" data-page="index.html" href="partidos.html">Partidos</a></li>
+						<li class="nav-item"><a class="nav-link" data-page="index.html" href="arbitros.html">Arbitros</a></li>
+						<li class="nav-item"><a class="nav-link" data-page="index.html" href="inscripcion.html">Inscripcion</a></li>
+					</ul>
                 </div>
             </div>
         </div>
     </nav>
-
 
     <section id="modals">
         <div class="modal" tabindex="-1" id="modal_login">
@@ -238,7 +246,7 @@
     <h1>Jugadores Actuales</h1>
 
     <div class="row mb-3 align-items-center">
-        <div class="col-auto">
+        <div class="col-12 col-md-4">
             <label for="filtroLiga" class="form-label fw-bold">Filtrar por Liga:</label>
             <select class="form-select" id="filtroLiga">
                 <option selected value="all">Todos</option>
@@ -249,7 +257,7 @@
             </select>
         </div>
 
-        <div class="col-auto">
+        <div class="col-12 col-md-4">
             <label for="filtroEquipo" class="form-label fw-bold">Filtrar por Equipo:</label>
             <select class="form-select" id="filtroEquipo">
                 <option selected value="all">Todos</option>
@@ -267,226 +275,229 @@
                 <option value="apeks">Apeks</option>
             </select>
         </div>
-        <div class="col">
+        <div class="col-12 col-md-4">
           <label for="buscarNombre" class="form-label fw-bold">Buscar por nombre:</label>
         <input type="text" class="form-control" id="buscarNombre" placeholder="Escribe un nombre">
     </div>
     </div>
-    <!-- Tabla de Jugadores -->
-    <table class="table table-hover table-striped">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Equipo</th>
-          <th scope="col">Liga</th>
-          <th scope="col">KDA</th>
-          <th scope="col">%HS</th>
-          <th scope="col">ROL</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- EMEA - Fnatic -->
-        <tr data-type="player" data-team="fnatic" data-league="EMEA" data-name="Derke">
-          <th scope="row">1</th>
-          <td>Derke</td>
-          <td><img src="assets/images/equipos/FnaticTeam.webp" width="24" class="me-2">Fnatic</td>
-          <td><img src="assets/images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" width="24" class="me-2">EMEA</td>
-          <td>1.85</td>
-          <td>52%</td>
-          <td>Duelista</td>
-        </tr>
-        <tr data-type="player" data-team="fnatic" data-league="EMEA" data-name="Boaster">
-          <th scope="row">2</th>
-          <td>Boaster</td>
-          <td><img src="assets/images/equipos/FnaticTeam.webp" width="24" class="me-2">Fnatic</td>
-          <td><img src="assets/images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" width="24" class="me-2">EMEA</td>
-          <td>1.65</td>
-          <td>48%</td>
-          <td>Iniciador</td>
-        </tr>
 
-        <!-- EMEA - Heretics -->
-        <tr data-type="player" data-team="heretics" data-league="EMEA" data-name="Mixwell">
-          <th scope="row">3</th>
-          <td>Mixwell</td>
-          <td><img src="assets/images/equipos/Team_Heretics.webp" width="24" class="me-2">Heretics</td>
-          <td><img src="assets/images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" width="24" class="me-2">EMEA</td>
-          <td>1.78</td>
-          <td>55%</td>
-          <td>Duelista</td>
-        </tr>
-        <tr data-type="player" data-team="heretics" data-league="EMEA" data-name="cNed">
-          <th scope="row">4</th>
-          <td>cNed</td>
-          <td><img src="assets/images/equipos/Team_Heretics.webp" width="24" class="me-2">Heretics</td>
-          <td><img src="assets/images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" width="24" class="me-2">EMEA</td>
-          <td>1.82</td>
-          <td>53%</td>
-          <td>Duelista</td>
-        </tr>
+    <div class="table-responsive">
+      <!-- Tabla de Jugadores -->
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th scope="col" class="d-none d-md-table-cell">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Equipo</th>
+            <th scope="col" class="d-none d-md-table-cell">Liga</th>
+            <th scope="col">KDA</th>
+            <th scope="col" class="d-none d-md-table-cell">%HS</th>
+            <th scope="col" class="d-none d-md-table-cell">ROL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- EMEA - Fnatic -->
+          <tr data-type="player" data-team="fnatic" data-league="EMEA" data-name="Derke">
+            <th scope="row" class="d-none d-md-table-cell">1</th>
+            <td>Derke</td>
+            <td><img src="assets/images/equipos/FnaticTeam.webp" width="24" class="me-2">Fnatic</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" width="24" class="me-2">EMEA</td>
+            <td>1.85</td>
+            <td class="d-none d-md-table-cell">52%</td>
+            <td class="d-none d-md-table-cell">Duelista</td>
+          </tr>
+          <tr data-type="player" data-team="fnatic" data-league="EMEA" data-name="Boaster">
+            <th scope="row" class="d-none d-md-table-cell">2</th>
+            <td>Boaster</td>
+            <td><img src="assets/images/equipos/FnaticTeam.webp" width="24" class="me-2">Fnatic</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" width="24" class="me-2">EMEA</td>
+            <td>1.65</td>
+            <td class="d-none d-md-table-cell">48%</td>
+            <td class="d-none d-md-table-cell">Iniciador</td>
+          </tr>
 
-        <!-- AMERICAS - Team Liquid -->
-        <tr data-type="player" data-team="team-liquid" data-league="AMERICAS" data-name="yay">
-          <th scope="row">5</th>
-          <td>yay</td>
-          <td><img src="assets/images/equipos/Team_Liquid.webp" width="24" class="me-2">Team Liquid</td>
-          <td><img src="assets/images/ligas/VCT_2025_Americas_League_full_allmode.webp" width="24" class="me-2">AMERICAS</td>
-          <td>1.88</td>
-          <td>54%</td>
-          <td>Duelista</td>
-        </tr>
-        <tr data-type="player" data-team="team-liquid" data-league="AMERICAS" data-name="ScreaM">
-          <th scope="row">6</th>
-          <td>ScreaM</td>
-          <td><img src="assets/images/equipos/Team_Liquid.webp" width="24" class="me-2">Team Liquid</td>
-          <td><img src="assets/images/ligas/VCT_2025_Americas_League_full_allmode.webp" width="24" class="me-2">AMERICAS</td>
-          <td>1.99</td>
-          <td>61%</td>
-          <td>Duelista</td>
-        </tr>
+          <!-- EMEA - Heretics -->
+          <tr data-type="player" data-team="heretics" data-league="EMEA" data-name="Mixwell">
+            <th scope="row" class="d-none d-md-table-cell">3</th>
+            <td>Mixwell</td>
+            <td><img src="assets/images/equipos/Team_Heretics.webp" width="24" class="me-2">Heretics</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" width="24" class="me-2">EMEA</td>
+            <td>1.78</td>
+            <td class="d-none d-md-table-cell">55%</td>
+            <td class="d-none d-md-table-cell">Duelista</td>
+          </tr>
+          <tr data-type="player" data-team="heretics" data-league="EMEA" data-name="cNed">
+            <th scope="row" class="d-none d-md-table-cell">4</th>
+            <td>cNed</td>
+            <td><img src="assets/images/equipos/Team_Heretics.webp" width="24" class="me-2">Heretics</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" width="24" class="me-2">EMEA</td>
+            <td>1.82</td>
+            <td class="d-none d-md-table-cell">53%</td>
+            <td class="d-none d-md-table-cell">Duelista</td>
+          </tr>
 
-        <!-- PACIFIC - Paper Rex -->
-        <tr data-type="player" data-team="fut-esports" data-league="PACIFIC" data-name="f0rsakeN">
-          <th scope="row">7</th>
-          <td>f0rsakeN</td>
-          <td><img src="assets/images/equipos/FUT.webp" width="24" class="me-2">FUT Esports</td>
-          <td><img src="assets/images/ligas/VCT_2023_Pacific_League_full_allmode.webp" width="24" class="me-2">PACIFIC</td>
-          <td>1.82</td>
-          <td>53%</td>
-          <td>Duelista</td>
-        </tr>
-        <tr data-type="player" data-team="fut-esports" data-league="PACIFIC" data-name="Derke2">
-          <th scope="row">8</th>
-          <td>Derke2</td>
-          <td><img src="assets/images/equipos/FUT.webp" width="24" class="me-2">FUT Esports</td>
-          <td><img src="assets/images/ligas/VCT_2023_Pacific_League_full_allmode.webp" width="24" class="me-2">PACIFIC</td>
-          <td>1.75</td>
-          <td>50%</td>
-          <td>Controlador</td>
-        </tr>
+          <!-- AMERICAS - Team Liquid -->
+          <tr data-type="player" data-team="team-liquid" data-league="AMERICAS" data-name="yay">
+            <th scope="row" class="d-none d-md-table-cell">5</th>
+            <td>yay</td>
+            <td><img src="assets/images/equipos/Team_Liquid.webp" width="24" class="me-2">Team Liquid</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_2025_Americas_League_full_allmode.webp" width="24" class="me-2">AMERICAS</td>
+            <td>1.88</td>
+            <td class="d-none d-md-table-cell">54%</td>
+            <td class="d-none d-md-table-cell">Duelista</td>
+          </tr>
+          <tr data-type="player" data-team="team-liquid" data-league="AMERICAS" data-name="ScreaM">
+            <th scope="row" class="d-none d-md-table-cell">6</th>
+            <td>ScreaM</td>
+            <td><img src="assets/images/equipos/Team_Liquid.webp" width="24" class="me-2">Team Liquid</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_2025_Americas_League_full_allmode.webp" width="24" class="me-2">AMERICAS</td>
+            <td>1.99</td>
+            <td class="d-none d-md-table-cell">61%</td>
+            <td class="d-none d-md-table-cell">Duelista</td>
+          </tr>
 
-        <!-- CN - KOI -->
-        <tr data-type="player" data-team="koi" data-league="CN" data-name="SovaCN">
-          <th scope="row">9</th>
-          <td>SovaCN</td>
-          <td><img src="assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
-          <td><img src="assets/images/ligas/VCT_China_full_allmode.webp" width="24" class="me-2">CN</td>
-          <td>1.90</td>
-          <td>56%</td>
-          <td>Duelista</td>
-        </tr>
-        <tr data-type="player" data-team="koi" data-league="CN" data-name="PhoenixCN">
-          <th scope="row">10</th>
-          <td>PhoenixCN</td>
-          <td><img src="assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
-          <td><img src="assets/images/ligas/VCT_China_full_allmode.webp" width="24" class="me-2">CN</td>
-          <td>1.65</td>
-          <td>49%</td>
-          <td>Sentinela</td>
-        </tr>
-        <!-- EMEA - Team Vitality -->
-        <tr data-type="player" data-team="team-vitality" data-league="EMEA" data-name="ShahZaM">
-          <th scope="row">11</th>
-          <td>ShahZaM</td>
-          <td><img src="assets/images/equipos/Team_Vitality.webp" width="24" class="me-2">Team Vitality</td>
-          <td><img src="assets/images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" width="24" class="me-2">EMEA</td>
-          <td>1.68</td>
-          <td>50%</td>
-          <td>Sentinela</td>
-        </tr>
-        <tr data-type="player" data-team="team-vitality" data-league="EMEA" data-name="zyppan">
-          <th scope="row">12</th>
-          <td>zyppan</td>
-          <td><img src="assets/images/equipos/Team_Vitality.webp" width="24" class="me-2">Team Vitality</td>
-          <td><img src="assets/images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" width="24" class="me-2">EMEA</td>
-          <td>1.72</td>
-          <td>52%</td>
-          <td>Iniciador</td>
-        </tr>
+          <!-- PACIFIC - Paper Rex -->
+          <tr data-type="player" data-team="fut-esports" data-league="PACIFIC" data-name="f0rsakeN">
+            <th scope="row" class="d-none d-md-table-cell">7</th>
+            <td>f0rsakeN</td>
+            <td><img src="assets/images/equipos/FUT.webp" width="24" class="me-2">FUT Esports</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_2023_Pacific_League_full_allmode.webp" width="24" class="me-2">PACIFIC</td>
+            <td>1.82</td>
+            <td class="d-none d-md-table-cell">53%</td>
+            <td class="d-none d-md-table-cell">Duelista</td>
+          </tr>
+          <tr data-type="player" data-team="fut-esports" data-league="PACIFIC" data-name="Derke2">
+            <th scope="row" class="d-none d-md-table-cell">8</th>
+            <td>Derke2</td>
+            <td><img src="assets/images/equipos/FUT.webp" width="24" class="me-2">FUT Esports</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_2023_Pacific_League_full_allmode.webp" width="24" class="me-2">PACIFIC</td>
+            <td>1.75</td>
+            <td class="d-none d-md-table-cell">50%</td>
+            <td class="d-none d-md-table-cell">Controlador</td>
+          </tr>
 
-        <!-- AMERICAS - FaZe Clan -->
-        <tr data-type="player" data-team="faze" data-league="AMERICAS" data-name="DerkeFA">
-          <th scope="row">13</th>
-          <td>DerkeFA</td>
-          <td><img src="assets/images/equipos/FaZe.webp" width="24" class="me-2">FaZe Clan</td>
-          <td><img src="assets/images/ligas/VCT_2025_Americas_League_full_allmode.webp" width="24" class="me-2">AMERICAS</td>
-          <td>1.85</td>
-          <td>53%</td>
-          <td>Duelista</td>
-        </tr>
-        <tr data-type="player" data-team="faze" data-league="AMERICAS" data-name="BoasterFA">
-          <th scope="row">14</th>
-          <td>BoasterFA</td>
-          <td><img src="assets/images/equipos/FaZe.webp" width="24" class="me-2">FaZe Clan</td>
-          <td><img src="assets/images/ligas/VCT_2025_Americas_League_full_allmode.webp" width="24" class="me-2">AMERICAS</td>
-          <td>1.66</td>
-          <td>48%</td>
-          <td>Controlador</td>
-        </tr>
+          <!-- CN - KOI -->
+          <tr data-type="player" data-team="koi" data-league="CN" data-name="SovaCN">
+            <th scope="row" class="d-none d-md-table-cell">9</th>
+            <td>SovaCN</td>
+            <td><img src="assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_China_full_allmode.webp" width="24" class="me-2">CN</td>
+            <td>1.90</td>
+            <td class="d-none d-md-table-cell">56%</td>
+            <td class="d-none d-md-table-cell">Duelista</td>
+          </tr>
+          <tr data-type="player" data-team="koi" data-league="CN" data-name="PhoenixCN">
+            <th scope="row" class="d-none d-md-table-cell">10</th>
+            <td>PhoenixCN</td>
+            <td><img src="assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_China_full_allmode.webp" width="24" class="me-2">CN</td>
+            <td>1.65</td>
+            <td class="d-none d-md-table-cell">49%</td>
+            <td class="d-none d-md-table-cell">Sentinela</td>
+          </tr>
+          <!-- EMEA - Team Vitality -->
+          <tr data-type="player" data-team="team-vitality" data-league="EMEA" data-name="ShahZaM">
+            <th scope="row" class="d-none d-md-table-cell">11</th>
+            <td>ShahZaM</td>
+            <td><img src="assets/images/equipos/Team_Vitality.webp" width="24" class="me-2">Team Vitality</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" width="24" class="me-2">EMEA</td>
+            <td>1.68</td>
+            <td class="d-none d-md-table-cell">50%</td>
+            <td class="d-none d-md-table-cell">Sentinela</td>
+          </tr>
+          <tr data-type="player" data-team="team-vitality" data-league="EMEA" data-name="zyppan">
+            <th scope="row" class="d-none d-md-table-cell">12</th>
+            <td>zyppan</td>
+            <td><img src="assets/images/equipos/Team_Vitality.webp" width="24" class="me-2">Team Vitality</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" width="24" class="me-2">EMEA</td>
+            <td>1.72</td>
+            <td class="d-none d-md-table-cell">52%</td>
+            <td class="d-none d-md-table-cell">Iniciador</td>
+          </tr>
 
-        <!-- PACIFIC - FUT Esports -->
-        <tr data-type="player" data-team="fut-esports" data-league="PACIFIC" data-name="PaperRex1">
-          <th scope="row">15</th>
-          <td>PaperRex1</td>
-          <td><img src="assets/images/equipos/FUT.webp" width="24" class="me-2">FUT Esports</td>
-          <td><img src="assets/images/ligas/VCT_2023_Pacific_League_full_allmode.webp" width="24" class="me-2">PACIFIC</td>
-          <td>1.78</td>
-          <td>50%</td>
-          <td>Duelista</td>
-        </tr>
-        <tr data-type="player" data-team="fut-esports" data-league="PACIFIC" data-name="PaperRex2">
-          <th scope="row">16</th>
-          <td>PaperRex2</td>
-          <td><img src="assets/images/equipos/FUT.webp" width="24" class="me-2">FUT Esports</td>
-          <td><img src="assets/images/ligas/VCT_2023_Pacific_League_full_allmode.webp" width="24" class="me-2">PACIFIC</td>
-          <td>1.69</td>
-          <td>47%</td>
-          <td>Iniciador</td>
-        </tr>
+          <!-- AMERICAS - FaZe Clan -->
+          <tr data-type="player" data-team="faze" data-league="AMERICAS" data-name="DerkeFA">
+            <th scope="row" class="d-none d-md-table-cell">13</th>
+            <td>DerkeFA</td>
+            <td><img src="assets/images/equipos/FaZe.webp" width="24" class="me-2">FaZe Clan</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_2025_Americas_League_full_allmode.webp" width="24" class="me-2">AMERICAS</td>
+            <td>1.85</td>
+            <td class="d-none d-md-table-cell">53%</td>
+            <td class="d-none d-md-table-cell">Duelista</td>
+          </tr>
+          <tr data-type="player" data-team="faze" data-league="AMERICAS" data-name="BoasterFA">
+            <th scope="row" class="d-none d-md-table-cell">14</th>
+            <td>BoasterFA</td>
+            <td><img src="assets/images/equipos/FaZe.webp" width="24" class="me-2">FaZe Clan</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_2025_Americas_League_full_allmode.webp" width="24" class="me-2">AMERICAS</td>
+            <td>1.66</td>
+            <td class="d-none d-md-table-cell">48%</td>
+            <td class="d-none d-md-table-cell">Controlador</td>
+          </tr>
 
-        <!-- CN - KOI -->
-        <tr data-type="player" data-team="koi" data-league="CN" data-name="KOI1">
-          <th scope="row">17</th>
-          <td>KOI1</td>
-          <td><img src="assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
-          <td><img src="assets/images/ligas/VCT_China_full_allmode.webp" width="24" class="me-2">CN</td>
-          <td>1.80</td>
-          <td>52%</td>
-          <td>Duelista</td>
-        </tr>
-        <tr data-type="player" data-team="koi" data-league="CN" data-name="KOI2">
-          <th scope="row">18</th>
-          <td>KOI2</td>
-          <td><img src="assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
-          <td><img src="assets/images/ligas/VCT_China_full_allmode.webp" width="24" class="me-2">CN</td>
-          <td>1.62</td>
-          <td>49%</td>
-          <td>Sentinela</td>
-        </tr>
+          <!-- PACIFIC - FUT Esports -->
+          <tr data-type="player" data-team="fut-esports" data-league="PACIFIC" data-name="PaperRex1">
+            <th scope="row" class="d-none d-md-table-cell">15</th>
+            <td>PaperRex1</td>
+            <td><img src="assets/images/equipos/FUT.webp" width="24" class="me-2">FUT Esports</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_2023_Pacific_League_full_allmode.webp" width="24" class="me-2">PACIFIC</td>
+            <td>1.78</td>
+            <td class="d-none d-md-table-cell">50%</td>
+            <td class="d-none d-md-table-cell">Duelista</td>
+          </tr>
+          <tr data-type="player" data-team="fut-esports" data-league="PACIFIC" data-name="PaperRex2">
+            <th scope="row" class="d-none d-md-table-cell">16</th>
+            <td>PaperRex2</td>
+            <td><img src="assets/images/equipos/FUT.webp" width="24" class="me-2">FUT Esports</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_2023_Pacific_League_full_allmode.webp" width="24" class="me-2">PACIFIC</td>
+            <td>1.69</td>
+            <td class="d-none d-md-table-cell">47%</td>
+            <td class="d-none d-md-table-cell">Iniciador</td>
+          </tr>
 
-        <!-- EMEA - BBL Esports -->
-        <tr data-type="player" data-team="bbl-esports" data-league="EMEA" data-name="ShahBBL">
-          <th scope="row">19</th>
-          <td>ShahBBL</td>
-          <td><img src="assets/images/equipos/BBL_Esports.webp" width="24" class="me-2">BBL Esports</td>
-          <td><img src="assets/images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" width="24" class="me-2">EMEA</td>
-          <td>1.70</td>
-          <td>50%</td>
-          <td>IGL</td>
-        </tr>
-        <tr data-type="player" data-team="bbl-esports" data-league="EMEA" data-name="KinguinBBL">
-          <th scope="row">20</th>
-          <td>KinguinBBL</td>
-          <td><img src="assets/images/equipos/BBL_Esports.webp" width="24" class="me-2">BBL Esports</td>
-          <td><img src="assets/images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" width="24" class="me-2">EMEA</td>
-          <td>1.67</td>
-          <td>48%</td>
-          <td>Controlador</td>
-        </tr>
-      </tbody>
-    </table>
-</div>
+          <!-- CN - KOI -->
+          <tr data-type="player" data-team="koi" data-league="CN" data-name="KOI1">
+            <th scope="row" class="d-none d-md-table-cell">17</th>
+            <td>Patitekk</td>
+            <td><img src="assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_China_full_allmode.webp" width="24" class="me-2">CN</td>
+            <td>1.80</td>
+            <td class="d-none d-md-table-cell">52%</td>
+            <td class="d-none d-md-table-cell">Duelista</td>
+          </tr>
+          <tr data-type="player" data-team="koi" data-league="CN" data-name="KOI2">
+            <th scope="row" class="d-none d-md-table-cell">18</th>
+            <td>Avova</td>
+            <td><img src="assets/images/equipos/KOI.webp" width="24" class="me-2">KOI</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_China_full_allmode.webp" width="24" class="me-2">CN</td>
+            <td>1.62</td>
+            <td class="d-none d-md-table-cell">49%</td>
+            <td class="d-none d-md-table-cell">Sentinela</td>
+          </tr>
+
+          <!-- EMEA - BBL Esports -->
+          <tr data-type="player" data-team="bbl-esports" data-league="EMEA" data-name="ShahBBL">
+            <th scope="row" class="d-none d-md-table-cell">19</th>
+            <td>ShahBBL</td>
+            <td><img src="assets/images/equipos/BBL_Esports.webp" width="24" class="me-2">BBL Esports</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" width="24" class="me-2">EMEA</td>
+            <td>1.70</td>
+            <td class="d-none d-md-table-cell">50%</td>
+            <td class="d-none d-md-table-cell">IGL</td>
+          </tr>
+          <tr data-type="player" data-team="bbl-esports" data-league="EMEA" data-name="KinguinBBL">
+            <th scope="row" class="d-none d-md-table-cell">20</th>
+            <td>KinguinBBL</td>
+            <td><img src="assets/images/equipos/BBL_Esports.webp" width="24" class="me-2">BBL Esports</td>
+            <td class="d-none d-md-table-cell"><img src="assets/images/ligas/VCT_2025_EMEA_League_full_darkmode.webp" width="24" class="me-2">EMEA</td>
+            <td>1.67</td>
+            <td class="d-none d-md-table-cell">48%</td>
+            <td class="d-none d-md-table-cell">Controlador</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
 
 	<footer class="py-4 mt-5" style="background-color: #000000;">
@@ -501,5 +512,13 @@
     		<p class="mt-3 mb-0">© 2025 Liga Valorant</p>
   		</div>
 	</footer>
+
+  <!-- Referencia a mi script -->
+  <script src="js/mainJs.js"></script>
+
+  <!-- Referencia al script de bootstrap -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
 </html>

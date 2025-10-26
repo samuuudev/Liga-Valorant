@@ -21,16 +21,17 @@
 			<a class="navbar-brand" href="#">Liga Valorant</a>
 			<div class="text-center" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Inicio</a></li>
 
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="ligas.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Ligas
 						</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="ligas.html#ligas-activas-pro">Liga Profesional</a></li>
-							<li><a class="dropdown-item" href="ligas.html#ligas-activas-amateur">Liga Amateur</a></li>
-							<li><a class="dropdown-item" href="ligas.html#ligas-inactivas-pro">Ligas inactivas</a></li>
+                            <li><a class="dropdown-item" href="/ligas.html">Inicio</a></li>
+							<li><a class="dropdown-item" href="/ligas.html#ligas-activas-pro">Liga Profesional</a></li>
+							<li><a class="dropdown-item" href="/ligas.html#ligas-activas-amateur">Liga Amateur</a></li>
+							<li><a class="dropdown-item" href="/ligas.html#ligas-inactivas-pro">Ligas inactivas</a></li>
 						</ul>
 					</li>
 					
@@ -62,22 +63,39 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" data-page="index.html" href="ligas.html">Ligas</a></li>
-                        <li class="nav-item"><a class="nav-link active" data-page="index.html" href="equipos.html">Equipos</a></li>
-                        <li class="nav-item"><a class="nav-link" data-page="index.html" href="jugadores.html">Jugadores</a></li>
-                        <li class="nav-item"><a class="nav-link" data-page="index.html" href="arbitros.html">Arbitros</a></li>
-                        <li class="nav-item"><a class="nav-link" data-page="index.html" href="inscripcion.html">Inscripcion</a></li>
-                    </ul>
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Inicio</a></li>
+
+						<li class="nav-item">
+							<a class="nav-link" data-bs-toggle="collapse" href="#submenuLigas" role="button" aria-expanded="false" aria-controls="submenuLigas">
+								Ligas
+							</a>
+							<div class="collapse" id="submenuLigas">
+								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ps-3">
+								<li><a href="ligas.html" class="nav-link">Inicio</a></li>
+								<li><a href="ligas.html#ligas-activas-pro" class="nav-link">Liga Profesional</a></li>
+								<li><a href="ligas.html#ligas-activas-amateur" class="nav-link">Liga Amateur</a></li>
+								<li><a href="ligas.html#ligas-inactivas-pro" class="nav-link">Ligas inactivas</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item"><a class="nav-link" data-page="index.html" href="equipos.html">Equipos</a></li>
+						<li class="nav-item"><a class="nav-link" data-page="index.html" href="jugadores.html">Jugadores</a></li>
+						<li class="nav-item"><a class="nav-link" data-page="index.html" href="partidos.html">Partidos</a></li>
+						<li class="nav-item"><a class="nav-link" data-page="index.html" href="arbitros.html">Arbitros</a></li>
+						<li class="nav-item"><a class="nav-link" data-page="index.html" href="inscripcion.html">Inscripcion</a></li>
+					</ul>
                 </div>
             </div>
         </div>
     </nav>
 
-    <header id="cabecera-equipos">
-        <h1>Campeonato mundial actual</h1>
-        <p>Algo</p>
+    <header id="clasificacion-header" class="py-5 text-white" style="background: linear-gradient(rgba(15, 25, 35, 0.8), rgba(15, 25, 35, 0.96)), 
+	url('assets/images/LNY_Sage-Wallpapers/Static/LNY_Sage-2_ShoppingA.jpg') center/cover">
+        <div class="header-content text-center">
+            <h1>Campeonato mundial actual</h1>
+            <p>Descubre todo sobre el campeonato mundial actual: resultados, equipos y la emoción en tiempo real.</p>
+        </div>
     </header>
 
     <section id="modals">
