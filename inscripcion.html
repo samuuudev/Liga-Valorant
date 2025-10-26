@@ -5,9 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Liga Valorant | Inscripcion</title>
 
-	<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/mainStyle.css" />
-    <link rel="stylesheet" href="/css/modal.css">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mainStyle.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/toast.css">
+    <link rel="stylesheet" href="css/formulario.css">
+
 
 </head>
 <body>
@@ -123,10 +126,15 @@
 
     </section>
 
+    <section id="toasts">
+        <!-- Toast container centrado -->
+        <div id="toastContainer" style="position: fixed; top: 1rem; left: 50%; transform: translateX(-50%); z-index: 9999;"></div>
+
+    </section>
+
     <section id="inscripcion">
 
         <div>
-
             <h2 class="text-center mb-4">Formulario de Inscripción</h2>
     
             <form id="form">
@@ -155,7 +163,7 @@
                     <input type="text" name="units" id="units">
                 </div>
 
-                <input type="submit" id="button" value="Enviar inscripcion" >
+                <input class="btn btn-primary" type="submit" id="button" value="Enviar inscripcion" >
             </form>
         </div>
 
@@ -176,19 +184,37 @@
 	</footer>
 
 
+    <!-- Importamos el sdk de emailjs y lo inicializamos -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script> emailjs.init('pdxNN5_vUg9YaX8Eq')</script>
+
     <!-- Script relacionado con el formulario -->
-
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-    <script type="text/javascript">
-    emailjs.init('pdxNN5_vUg9YaX8Eq')
-    </script>
-
+    <script src="js/mail.js"></script>
 	<!-- Referencia a mi script javascript -->
 	<script src="/js/mainJs.js"></script>
 
     <!-- Referencia al script de bootstrap -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function showToast(message, type = "success") {
+        const container = document.getElementById('toastContainer');
+        const toast = document.createElement('div');
+        toast.className = `toast-custom ${type === 'success' ? 'toast-success' : 'toast-error'}`;
+        toast.textContent = message;
+        container.appendChild(toast);
+
+        setTimeout(() => {
+            container.removeChild(toast);
+        }, 3000);
+        }
+
+        // Evento del botón de prueba
+        document.getElementById('testToastBtn').addEventListener('click', () => {
+        // Alterna entre éxito y error cada vez que se presiona
+        const randomType = Math.random() > 0.5 ? 'success' : 'error';
+        showToast(randomType === 'success' ? '¡Prueba exitosa!' : '¡Error de prueba!', randomType);
+        });
+    </script>
 </body>
 </html>

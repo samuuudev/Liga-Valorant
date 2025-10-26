@@ -1,20 +1,35 @@
-const btn = document.getElementById('button');
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.getElementById('button');
 
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
+  function showToast(message, type = "success") {
+    const container = document.getElementById('toastContainer');
+    const toast = document.createElement('div');
+    toast.className = `toast-custom ${type === 'success' ? 'toast-success' : 'toast-error'}`;
+    toast.textContent = message;
+    container.appendChild(toast);
 
-   btn.value = 'Enviando...';
+    // Remover el toast después de 3 segundos
+    setTimeout(() => {
+      container.removeChild(toast);
+    }, 3000);
+  }
 
-   const serviceID = 'service_9sx7wox';
-   const templateID = 'template_683i1np';
+  document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    btn.value = 'Sending...';
 
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
-    });
+    const serviceID = 'default_service';
+    const templateID = 'template_683i1np';
+
+    emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        btn.value = 'Enviar inscripción';
+        showToast('¡Email enviado correctamente!', 'success');
+      })
+      .catch((err) => {
+        btn.value = 'Enviar inscripción';
+        showToast('Error al enviar el email', 'error');
+        console.error(err);
+      });
+  });
 });
